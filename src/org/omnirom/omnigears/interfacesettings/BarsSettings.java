@@ -60,6 +60,7 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     private static final String CUSTOM_HEADER_IMAGE = "status_bar_custom_header";
     private static final String DAYLIGHT_HEADER_PACK = "daylight_header_pack";
     private static final String DEFAULT_HEADER_PACKAGE = "com.android.systemui";
+    private static final String CARRIER_LABEL = "carrier_options";
 
     private ListPreference mDaylightHeaderPack;
     private CheckBoxPreference mCustomHeaderImage;
@@ -80,6 +81,10 @@ public class BarsSettings extends SettingsPreferenceFragment implements
         if (TrafficStats.getTotalTxBytes() == TrafficStats.UNSUPPORTED ||
                 TrafficStats.getTotalRxBytes() == TrafficStats.UNSUPPORTED) {
             prefScreen.removePreference(findPreference(NETWORK_TRAFFIC_ROOT));
+        }
+
+        if (com.android.settings.Utils.isWifiOnly(getActivity())) {
+            prefScreen.removePreference(findPreference(CARRIER_LABEL));
         }
 
         final boolean customHeaderImage = Settings.System.getInt(getContentResolver(),

@@ -46,6 +46,12 @@
                         android:targetPackage="com.android.systemui"
                         android:targetClass="com.android.systemui.tuner.StatusBarActivity" />
             </PreferenceScreen>
+
+            <PreferenceScreen
+                android:key="carrier_options"
+                android:title="@string/carrier_options"
+                android:fragment="org.omnirom.omnigears.interfacesettings.CarrierLabel" />
+
         </PreferenceCategory>
 
         <!-- Network traffic meter -->
