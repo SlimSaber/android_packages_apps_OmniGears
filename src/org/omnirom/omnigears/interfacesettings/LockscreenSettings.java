@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package org.omnirom.omnigears;
+package org.omnirom.omnigears.interfacesettings;
 
 import android.app.Activity;
 import android.app.WallpaperManager;
@@ -27,6 +27,7 @@ import android.preference.PreferenceScreen;
 import android.widget.Toast;
 
 import com.android.internal.logging.MetricsLogger;
+import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class LockscreenSettings extends SettingsPreferenceFragment {

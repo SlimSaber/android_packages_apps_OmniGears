@@ -194,15 +194,20 @@
     <string name="doze_brightness_level_title">Brightness level</string>
 
     <!-- Lock screen wallpaper -->
-   <string name="lockscreen_wallpaper_title">Wallpaper</string>
-   <string name="lockscreen_wallpaper_set_title">Set lock screen wallpaper</string>
-   <string name="lockscreen_wallpaper_clear_title">Clear lock screen wallpaper</string>
-   <string name="reset_lockscreen_wallpaper">Set to default</string>
+    <string name="lockscreen_wallpaper_title">Wallpaper</string>
+    <string name="lockscreen_wallpaper_set_title">Set lock screen wallpaper</string>
+    <string name="lockscreen_wallpaper_clear_title">Clear lock screen wallpaper</string>
+    <string name="reset_lockscreen_wallpaper">Set to default</string>
 
-   <string name="notification_title">Notification panel</string>
-   <string name="status_bar_custom_header_title">Custom header image</string>
-   <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
-   <string name="daylight_header_pack_title">Header image pack</string>
+    <!-- Lock screen shortcut -->
+    <string name="lockscreen_shortcut_title">Shortcuts</string>
+    <string name="lockscreen_voice_shortcut_title">Voice assist shortcut</string>
+    <string name="lockscreen_voice_shortcut_summary">Show voice assist instead of dialer shortcut</string>
+
+    <string name="notification_title">Notification panel</string>
+    <string name="status_bar_custom_header_title">Custom header image</string>
+    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
+    <string name="daylight_header_pack_title">Header image pack</string>
 
     <!-- Network traffic -->
     <string name="network_traffic_title">Network traffic</string>

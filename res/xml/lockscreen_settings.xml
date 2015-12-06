@@ -18,6 +18,18 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
+        android:key="lockscreen_shortcut"
+        android:title="@string/lockscreen_shortcut_title" >
+
+        <com.android.settings.preference.SecureCheckBoxPreference
+            android:key="lockscreen_voice_shortcut"
+            android:title="@string/lockscreen_voice_shortcut_title"
+            android:summary="@string/lockscreen_voice_shortcut_summary"
+            android:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="lockscreen_wallpaper"
         android:title="@string/lockscreen_wallpaper_title" >
 
