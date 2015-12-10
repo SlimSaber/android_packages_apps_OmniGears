@@ -28,6 +28,12 @@
                 android:summary="@string/status_bar_brightness_control_summary"
                 android:defaultValue="false"/>
 
+            <com.android.settings.preference.SystemCheckBoxPreference
+                android:key="double_tap_sleep_gesture"
+                android:title="@string/double_tap_to_sleep_title"
+                android:summary="@string/double_tap_to_sleep_summary"
+                android:defaultValue="false" />
+
             <!--<PreferenceScreen
                 android:key="statusbar_battery"
                 android:title="@string/battery_title"

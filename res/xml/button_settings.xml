@@ -97,7 +97,7 @@
             android:key="force_show_overflow_menu"
             android:title="@string/force_show_overflow_menu_title"
             android:summary="@string/force_show_overflow_menu_summary"
-                android:persistent="false"/>-->
+            android:persistent="false"/>-->
 
         <PreferenceScreen
             android:key="button_brightness"

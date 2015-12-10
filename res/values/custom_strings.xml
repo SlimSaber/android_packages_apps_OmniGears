@@ -67,6 +67,10 @@
     <string name="keys_action_app_switch_short">Default</string>
     <string name="keys_action_omniswitch_short">OmniSwitch</string>
 
+    <!-- Double tap to sleep -->
+    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
+
     <!-- Doze pulse (ambient display) options -->
     <string name="doze_overwrite_value_title">Overwrite value</string>
     <string name="doze_overwrite_value_summary">Allow to overwrite default value with user config</string>
