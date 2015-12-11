@@ -126,6 +126,7 @@ public class AmbientSettings extends SettingsPreferenceFragment implements
             removePreference(KEY_DOZE_TIME_MODE);
             removePreference(KEY_DOZE_SHAKE_THRESHOLD);
             removePreference(KEY_DOZE_SHAKE_CATEGORY);
+            removePreference(KEY_DOZE_PULSE_MODE);
         }
         updateDozeListMode();
         updateDozeOptions();
