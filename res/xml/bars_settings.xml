@@ -87,11 +87,10 @@
                 android:persistent="false" />
 
             <PreferenceScreen
-                    android:title="@string/quick_settings_title"
-                    android:summary="@string/quick_settings_summary" >
-                <intent android:action="android.intent.action.MAIN"
-                        android:targetPackage="com.android.systemui"
-                        android:targetClass="com.android.systemui.tuner.QsTunerActivity" />
-            </PreferenceScreen>
+                android:id="@+id/qs_settings"
+                android:title="@string/qs_settings_title"
+                android:summary="@string/qs_settings_summary"
+                android:fragment="org.omnirom.omnigears.qs.QsSettings" />
+
         </PreferenceCategory>
 </PreferenceScreen>

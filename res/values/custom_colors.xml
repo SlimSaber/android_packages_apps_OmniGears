@@ -14,13 +14,9 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
-
-<resources>
-    <dimen name="color_preference_width">16dip</dimen>
-    <dimen name="color_preference_height">16dip</dimen>
-    <dimen name="color_preference_height_large">32dip</dimen>
-
-    <dimen name="qs_tile_max_size">120dp</dimen>
-    <dimen name="qs_tile_max_padding">10dp</dimen>
-    <dimen name="qs_tile_dragged_z">10dp</dimen>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+    <!-- Qs tiles -->
+    <color name="qs_tile_tint_color">#FF009587</color>
+    
 </resources>
