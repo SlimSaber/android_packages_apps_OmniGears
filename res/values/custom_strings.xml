@@ -258,4 +258,11 @@
     <string name="recents_search_bar_summary"></string>
     <string name="recents_fullscreen_title">Fullscreen</string>
     <string name="recents_fullscreen_summary"></string>
+
+    <string name="weather_title">Weather</string>
+    <string name="weather_config_title">Service settings</string>
+    <string name="weather_config_summary"></string>
+    <string name="header_weather_title">Header view weather</string>
+    <string name="header_weather_summary">Enable notification panel header weather display</string>
+    <string name="weather_icon_pack_title">Condition icon pack</string>
 </resources>
