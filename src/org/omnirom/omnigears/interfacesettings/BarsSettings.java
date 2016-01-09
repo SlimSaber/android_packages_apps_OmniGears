@@ -61,6 +61,7 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     private static final String DAYLIGHT_HEADER_PACK = "daylight_header_pack";
     private static final String DEFAULT_HEADER_PACKAGE = "com.android.systemui";
     private static final String CARRIER_LABEL = "carrier_options";
+    private static final String NAVIGATIONBAR_ROOT = "category_navigationbar";
 
     private ListPreference mDaylightHeaderPack;
     private CheckBoxPreference mCustomHeaderImage;
@@ -76,6 +77,12 @@ public class BarsSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.bars_settings);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
+
+        // Navigationbar catagory will not be displayed when the device is not a tablet
+        // or the device has physical keys
+        if ((!DeviceUtils.deviceSupportNavigationBar(getActivity())) || !DeviceUtils.isTablet(getActivity())) {
+            prefScreen.removePreference(findPreference(NAVIGATIONBAR_ROOT));
+        }
 
         // TrafficStats will return UNSUPPORTED if the device does not support it.
         if (TrafficStats.getTotalTxBytes() == TrafficStats.UNSUPPORTED ||

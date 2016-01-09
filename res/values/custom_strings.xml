@@ -265,4 +265,11 @@
     <string name="header_weather_title">Header view weather</string>
     <string name="header_weather_summary">Enable notification panel header weather display</string>
     <string name="weather_icon_pack_title">Condition icon pack</string>
+
+    <!-- Navigationbar settings -->
+    <string name="navigationbar_title">Navigation bar</string>
+
+    <!-- Enable Tablet Style navigation bar -->
+    <string name="enable_tablet_navigation_title">Use tablet layout</string>
+    <string name="enable_tablet_navigation_summary">Tablet layout shows back and home on the left side and overview on the right side of the navigation bar</string>
 </resources>

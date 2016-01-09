@@ -53,12 +53,23 @@
                 android:fragment="org.omnirom.omnigears.interfacesettings.CarrierLabel" />
 
         </PreferenceCategory>
-
-        <!-- Network traffic meter -->
+ 
+       <!-- Network traffic meter -->
         <PreferenceScreen
             android:key="category_network_traffic"
             android:title="@string/network_traffic_title"
             android:fragment="org.omnirom.omnigears.interfacesettings.NetworkTraffic" />
+
+        <PreferenceCategory
+            android:key="category_navigationbar"
+            android:title="@string/navigationbar_title">
+
+            <com.android.settings.preference.SystemCheckBoxPreference
+                android:key="enable_tablet_navigation"
+                android:title="@string/enable_tablet_navigation_title"
+                android:summary="@string/enable_tablet_navigation_summary"
+                android:defaultValue="false" />
+        </PreferenceCategory>
 
         <PreferenceCategory
             android:key="notification_category"
