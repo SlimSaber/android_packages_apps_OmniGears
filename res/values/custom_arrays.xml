@@ -213,4 +213,30 @@
         <item>2</item>
         <item>3</item>
     </string-array>
+
+    <!-- Dashboard columns -->
+    <string-array name="dashboard_columns_phone_entries">
+        <item>@string/dashboard_columns_phone_default</item>
+        <item>@string/dashboard_columns_two</item>
+        <item>@string/dashboard_columns_three</item>
+    </string-array>
+
+    <string-array name="dashboard_columns_phone_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="dashboard_columns_tablet_entries">
+        <item>@string/dashboard_columns_tablet_default</item>
+        <item>@string/dashboard_columns_three</item>
+        <item>@string/dashboard_columns_four</item>
+    </string-array>
+
+    <string-array name="dashboard_columns_tablet_values" translatable="false">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
 </resources>

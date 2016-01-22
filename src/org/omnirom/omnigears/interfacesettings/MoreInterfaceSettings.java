@@ -22,6 +22,7 @@ import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
@@ -31,6 +32,7 @@ import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceGroup;
+import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.preference.PreferenceCategory;
 import android.provider.SearchIndexableResource;
@@ -39,6 +41,7 @@ import android.util.Log;
 
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.util.omni.PackageUtils;
+import com.android.internal.util.omni.DeviceUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -66,10 +69,12 @@ public class MoreInterfaceSettings extends SettingsPreferenceFragment implements
     private static final String DEFAULT_WEATHER_ICON_PACKAGE = "org.omnirom.omnijaws";
     private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
     private static final String LOCK_CLOCK_PACKAGE="com.cyanogenmod.lockclock";
+    private static final String DASHBOARD_COLUMNS = "dashboard_columns";
 
     private PreferenceCategory mWeatherCategory;
     private ListPreference mWeatherIconPack;
     private CheckBoxPreference mHeaderWeather;
+    private ListPreference mDashboardColumns;
 
     @Override
     protected int getMetricsCategory() {
@@ -110,6 +115,26 @@ public class MoreInterfaceSettings extends SettingsPreferenceFragment implements
 
             mHeaderWeather = (CheckBoxPreference) findPreference(STATUS_BAR_HEADER_WEATHER);
         }
+        mDashboardColumns = (ListPreference) findPreference(DASHBOARD_COLUMNS);
+        int dashboardValue = getResources().getInteger(R.integer.dashboard_num_columns);
+
+        final boolean isTablet = DeviceUtils.isTablet(getActivity());
+        if (!isTablet) {
+            // layout-land has a value of 2 but we dont want this to be the default
+            // for phones so set 1 as the default to display
+            dashboardValue = 1;
+        }
+        mDashboardColumns.setEntries(getResources().getStringArray(isTablet ?
+                R.array.dashboard_columns_tablet_entries : R.array.dashboard_columns_phone_entries));
+        mDashboardColumns.setEntryValues(getResources().getStringArray(isTablet ?
+                R.array.dashboard_columns_tablet_values : R.array.dashboard_columns_phone_values));
+
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        if (!prefs.contains(DASHBOARD_COLUMNS)) {
+            mDashboardColumns.setValue(Integer.toString(dashboardValue));
+        }
+        mDashboardColumns.setSummary(mDashboardColumns.getEntry());
+        mDashboardColumns.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -131,9 +156,14 @@ public class MoreInterfaceSettings extends SettingsPreferenceFragment implements
                     Settings.System.STATUS_BAR_WEATHER_ICON_PACK, value);
             int valueIndex = mWeatherIconPack.findIndexOfValue(value);
             mWeatherIconPack.setSummary(mWeatherIconPack.getEntries()[valueIndex]);
+            return true;
+        } else if (preference == mDashboardColumns) {
+            String value = (String) objValue;
+            int valueIndex = mDashboardColumns.findIndexOfValue(value);
+            mDashboardColumns.setSummary(mDashboardColumns.getEntries()[valueIndex]);
+            return true;
         }
-
-        return true;
+        return false;
     }
 
     private boolean isOmniJawsServiceInstalled() {

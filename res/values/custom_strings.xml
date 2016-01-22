@@ -272,4 +272,14 @@
     <!-- Enable Tablet Style navigation bar -->
     <string name="enable_tablet_navigation_title">Use tablet layout</string>
     <string name="enable_tablet_navigation_summary">Tablet layout shows back and home on the left side and overview on the right side of the navigation bar</string>
+
+    <string name="other_category">Other</string>
+
+    <!-- Dashboard columns -->
+    <string name="dashboard_columns_title">Settings columns</string>
+    <string name="dashboard_columns_phone_default">Default</string>
+    <string name="dashboard_columns_two">Two</string>
+    <string name="dashboard_columns_tablet_default">Default</string>
+    <string name="dashboard_columns_three">Three</string>
+    <string name="dashboard_columns_four">Four</string>
 </resources>
