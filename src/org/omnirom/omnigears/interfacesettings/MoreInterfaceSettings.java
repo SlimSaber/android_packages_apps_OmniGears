@@ -118,15 +118,15 @@ public class MoreInterfaceSettings extends SettingsPreferenceFragment implements
         mDashboardColumns = (ListPreference) findPreference(DASHBOARD_COLUMNS);
         int dashboardValue = getResources().getInteger(R.integer.dashboard_num_columns);
 
-        final boolean isTablet = DeviceUtils.isTablet(getActivity());
-        if (!isTablet) {
+        final boolean isPhone = DeviceUtils.isPhone(getActivity());
+        if (isPhone) {
             // layout-land has a value of 2 but we dont want this to be the default
             // for phones so set 1 as the default to display
             dashboardValue = 1;
         }
-        mDashboardColumns.setEntries(getResources().getStringArray(isTablet ?
+        mDashboardColumns.setEntries(getResources().getStringArray(!isPhone ?
                 R.array.dashboard_columns_tablet_entries : R.array.dashboard_columns_phone_entries));
-        mDashboardColumns.setEntryValues(getResources().getStringArray(isTablet ?
+        mDashboardColumns.setEntryValues(getResources().getStringArray(!isPhone ?
                 R.array.dashboard_columns_tablet_values : R.array.dashboard_columns_phone_values));
 
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());

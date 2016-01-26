@@ -62,6 +62,7 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     private static final String DEFAULT_HEADER_PACKAGE = "com.android.systemui";
     private static final String CARRIER_LABEL = "carrier_options";
     private static final String NAVIGATIONBAR_ROOT = "category_navigationbar";
+    private static final String TABLET_NAVIGATION_BAR = "enable_tablet_navigationr";
 
     private ListPreference mDaylightHeaderPack;
     private CheckBoxPreference mCustomHeaderImage;
@@ -80,7 +81,7 @@ public class BarsSettings extends SettingsPreferenceFragment implements
 
         // Navigationbar catagory will not be displayed when the device is not a tablet
         // or the device has physical keys
-        if ((!DeviceUtils.deviceSupportNavigationBar(getActivity())) || !DeviceUtils.isTablet(getActivity())) {
+        if ((!DeviceUtils.deviceSupportNavigationBar(getActivity())) || DeviceUtils.isPhone(getActivity())) {
             prefScreen.removePreference(findPreference(NAVIGATIONBAR_ROOT));
         }
 
@@ -201,6 +202,10 @@ public class BarsSettings extends SettingsPreferenceFragment implements
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     ArrayList<String> result = new ArrayList<String>();
+                    if ((!DeviceUtils.deviceSupportNavigationBar(context)) ||
+                            DeviceUtils.isPhone(context)) {
+                        result.add(TABLET_NAVIGATION_BAR);
+                    }
                     return result;
                 }
             };
