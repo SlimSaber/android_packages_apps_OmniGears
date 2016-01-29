@@ -108,6 +108,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private static final String KEYS_SHOW_NAVBAR_KEY = "navigation_bar_show";
     private static final String KEYS_DISABLE_HW_KEY = "hardware_keys_disable";
     private static final String NAVIGATION_BAR_RECENTS_STYLE = "navbar_recents_style";
+    private static final String BUTTON_BACK_KILL_TIMEOUT = "button_back_kill_timeout";
 
     // Available custom actions to perform on a key press.
     private static final int ACTION_NOTHING = 0;
@@ -164,6 +165,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private PreferenceCategory mKeysAppSwitchCategory;
     private PreferenceCategory mKeysAssistCategory;
     private ListPreference mNavbarRecentsStyle;
+    private ListPreference mBackKillTimeout;
 
     @Override
     protected int getMetricsCategory() {
@@ -185,7 +187,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         final PreferenceCategory volumeCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_VOLUME);
 
-        mButtonBrightnessSupport = getResources().getBoolean(com.android.internal.R.bool.config_button_brightness_support);
+        mButtonBrightnessSupport = res.getBoolean(com.android.internal.R.bool.config_button_brightness_support);
 
         if (hasVolumeRocker()) {
             mVolumeWake = (CheckBoxPreference) findPreference(BUTTON_VOLUME_WAKE);
@@ -226,7 +228,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
             prefScreen.removePreference(volumeCategory);
         }
 
-        final int deviceKeys = getResources().getInteger(
+        final int deviceKeys = res.getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
         final boolean hasBackKey = false; //(deviceKeys & KEY_MASK_BACK) != 0;
         final boolean hasHomeKey = false; //(deviceKeys & KEY_MASK_HOME) != 0;
@@ -321,7 +323,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
                 mKeySettings.put(Settings.System.KEY_HOME_ACTION, homePressAction);
 
                 int homeLongPressAction;
-                int longPressOnHomeBehavior = getResources().getInteger(
+                int longPressOnHomeBehavior = res.getInteger(
                         com.android.internal.R.integer.config_longPressOnHomeBehavior);
 
                 if (longPressOnHomeBehavior == 1) {
@@ -346,7 +348,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 
                 mKeySettings.put(Settings.System.KEY_HOME_LONG_PRESS_ACTION, homeLongPressAction);
 
-                int doubleTapOnHomeBehavior = getResources().getInteger(
+                int doubleTapOnHomeBehavior = res.getInteger(
                         com.android.internal.R.integer.config_doubleTapOnHomeBehavior);
 
                 int homeDoubleTapAction = Settings.System.getInt(resolver,
@@ -459,8 +461,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 //                        Settings.System.VIRTUAL_KEYS_HAPTIC_FEEDBACK, 1) == 1);
 //            }
 //
-            boolean hasNavBar = getResources().getBoolean(
-                    com.android.internal.R.bool.config_showNavigationBar);
+            boolean hasNavBar = res.getBoolean(com.android.internal.R.bool.config_showNavigationBar);
 //            mForceShowOverflowMenu.setChecked(Settings.System.getInt(resolver,
 //                    Settings.System.FORCE_SHOW_OVERFLOW_MENU, (!hasNavBar && hasMenuKey) ? 0 : 1) == 1);
 //
@@ -488,6 +489,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         mNavbarRecentsStyle.setValue(Integer.toString(recentsStyle));
         mNavbarRecentsStyle.setSummary(mNavbarRecentsStyle.getEntry());
         mNavbarRecentsStyle.setOnPreferenceChangeListener(this);
+
+        mBackKillTimeout = (ListPreference) findPreference(BUTTON_BACK_KILL_TIMEOUT);
+        final int backKillTimeoutDefault = res.getInteger(com.android.internal.R.integer.config_backKillTimeout);
+        final int backKillTimeout = Settings.System.getInt(resolver,
+                Settings.System.BUTTON_BACK_KILL_TIMEOUT, backKillTimeoutDefault);
+
+        mBackKillTimeout.setValue(Integer.toString(backKillTimeout));
+        mBackKillTimeout.setSummary(mBackKillTimeout.getEntry());
+        mBackKillTimeout.setOnPreferenceChangeListener(this);
 
 //        final PreferenceCategory headsethookCategory =
 //                (PreferenceCategory) prefScreen.findPreference(CATEGORY_HEADSETHOOK);
@@ -708,10 +718,14 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
                 }
             }
             int index = mNavbarRecentsStyle.findIndexOfValue((String) newValue);
-            mNavbarRecentsStyle.setSummary(
-                    mNavbarRecentsStyle.getEntries()[index]);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.NAVIGATION_BAR_RECENTS, value);
+            mNavbarRecentsStyle.setSummary(mNavbarRecentsStyle.getEntries()[index]);
+            Settings.System.putInt(getContentResolver(), Settings.System.NAVIGATION_BAR_RECENTS, value);
+            return true;
+        } else if (preference == mBackKillTimeout) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mBackKillTimeout.findIndexOfValue((String) newValue);
+            mBackKillTimeout.setSummary(mBackKillTimeout.getEntries()[index]);
+            Settings.System.putInt(getContentResolver(), Settings.System.BUTTON_BACK_KILL_TIMEOUT, value);
             return true;
         }
         return false;

@@ -72,6 +72,7 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
     private ManualButtonBrightnessDialog mManualBrightnessDialog;
     private IPowerManager mPowerService;
     private SeekBarPreference mButtonTimoutBar;
+    private int mCurrentBrightness;
 
     @Override
     protected int getMetricsCategory() {
@@ -94,6 +95,11 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
                 Settings.System.CUSTOM_BUTTON_USE_SCREEN_BRIGHTNESS, 0) != 0);
 
         mManualButtonBrightness = (Preference) findPreference(KEY_BUTTON_MANUAL_BRIGHTNESS);
+        final int customButtonBrightness = getResources().getInteger(
+                com.android.internal.R.integer.config_button_brightness_default);
+        mCurrentBrightness = Settings.System.getInt(getContext().getContentResolver(),
+                Settings.System.CUSTOM_BUTTON_BRIGHTNESS, customButtonBrightness);
+        mManualButtonBrightness.setSummary(String.valueOf(mCurrentBrightness));
 
         mButtonTimoutBar = (SeekBarPreference) findPreference(KEY_BUTTON_TIMEOUT);
         int currentTimeout = Settings.System.getInt(resolver,
@@ -184,7 +190,6 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
 
         private SeekBar mBacklightBar;
         private EditText mBacklightInput;
-        private int mCurrentBrightness;
         private boolean mIsDragging = false;
 
         public ManualButtonBrightnessDialog(Context context) {
@@ -202,11 +207,6 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
             setTitle(R.string.dialog_manual_brightness_title);
             setCancelable(true);
             setView(v);
-
-            final int customButtonBrightness = getResources().getInteger(
-                    com.android.internal.R.integer.config_button_brightness_default);
-            mCurrentBrightness = Settings.System.getInt(getContext().getContentResolver(),
-                    Settings.System.CUSTOM_BUTTON_BRIGHTNESS, customButtonBrightness);
 
             mBacklightBar.setMax(brightnessToProgress(PowerManager.BRIGHTNESS_ON));
             mBacklightBar.setProgress(brightnessToProgress(mCurrentBrightness));
@@ -233,9 +233,10 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
         public void onClick(DialogInterface dialog, int which) {
             if (which == DialogInterface.BUTTON_POSITIVE) {
                 try {
-                    int newBacklight = Integer.valueOf(mBacklightInput.getText().toString());
+                    mCurrentBrightness = Integer.valueOf(mBacklightInput.getText().toString());
                     Settings.System.putInt(getContext().getContentResolver(),
-                            Settings.System.CUSTOM_BUTTON_BRIGHTNESS, newBacklight);
+                            Settings.System.CUSTOM_BUTTON_BRIGHTNESS, mCurrentBrightness);
+                    mManualButtonBrightness.setSummary(String.valueOf(mCurrentBrightness));
                 } catch (NumberFormatException e) {
                     Log.d(TAG, "NumberFormatException " + e);
                 }

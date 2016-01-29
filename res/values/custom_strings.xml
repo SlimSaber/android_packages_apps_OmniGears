@@ -63,9 +63,15 @@
     <string name="button_home_wake_summary">Pressing the home button will wake the device</string>
     <string name="button_home_answers_call_title">Button answers call</string>
     <string name="button_home_answers_call_summary">Pressing the home button will answer incoming call</string>
-    <string name="button_other_title">Recents</string>
+    <string name="button_other_title">Other</string>
     <string name="keys_action_app_switch_short">Default</string>
     <string name="keys_action_omniswitch_short">OmniSwitch</string>
+    <string name="button_back_kill_enable_title">Kill app back button</string>
+    <string name="button_back_kill_enable_summary">Kill the foreground app by long-pressing the back button</string>
+    <string name="button_back_kill_timeout_title">Kill app timeout</string>
+    <string name="button_back_kill_timeout_500ms">500 ms</string>
+    <string name="button_back_kill_timeout_1000ms">1000 ms</string>
+    <string name="button_back_kill_timeout_1500ms">1500 ms</string>
 
     <!-- Double tap to sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
@@ -276,10 +282,10 @@
     <!-- Dashboard columns -->
     <string name="dashboard_columns_title">Settings columns</string>
     <string name="dashboard_columns_phone_default">Default</string>
-    <string name="dashboard_columns_two">Two</string>
+    <string name="dashboard_columns_two">2</string>
     <string name="dashboard_columns_tablet_default">Default</string>
-    <string name="dashboard_columns_three">Three</string>
-    <string name="dashboard_columns_four">Four</string>
+    <string name="dashboard_columns_three">3</string>
+    <string name="dashboard_columns_four">4</string>
 
     <!-- QS -->
     <string name="qs_settings_title">Quick Settings</string>

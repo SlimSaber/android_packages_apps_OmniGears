@@ -239,4 +239,16 @@
         <item>4</item>
     </string-array>
 
+    <string-array name="button_back_kill_timeout_entries" translatable="false">
+        <item>@string/button_back_kill_timeout_500ms</item>
+        <item>@string/button_back_kill_timeout_1000ms</item>
+        <item>@string/button_back_kill_timeout_1500ms</item>
+    </string-array>
+
+    <string-array name="button_back_kill_timeout_values" translatable="false">
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+    </string-array>
+
 </resources>

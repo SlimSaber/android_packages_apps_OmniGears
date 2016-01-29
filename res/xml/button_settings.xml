@@ -258,6 +258,20 @@
             android:entries="@array/navbar_recents_style_entries"
             android:entryValues="@array/navbar_recents_style_values"
             android:persistent="false"/>
+
+        <com.android.settings.preference.SystemCheckBoxPreference
+            android:key="button_back_kill_enable"
+            android:title="@string/button_back_kill_enable_title"
+            android:summary="@string/button_back_kill_enable_summary"
+            android:defaultValue="true"/>
+
+        <ListPreference
+            android:key="button_back_kill_timeout"
+            android:title="@string/button_back_kill_timeout_title"
+            android:entries="@array/button_back_kill_timeout_entries"
+            android:entryValues="@array/button_back_kill_timeout_values"
+            android:persistent="false"
+            android:dependency="button_back_kill_enable"/>
     </PreferenceCategory>
 
 <!--    <PreferenceCategory
