@@ -132,4 +132,6 @@
   <string name="button_manual_brightness">Helderheidsniveau</string>
   <string name="dialog_manual_brightness_title">Helderheidsniveau</string>
   <string name="unit_sec">s</string>
+  <string name="show_battery_percentage">Percentage ingebouwde accu weergeven</string>
+  <string name="show_battery_percentage_summary">Accupercentage weergeven in het pictogram op de statusbalk wanneer er niet wordt opgeladen</string>
 </resources>

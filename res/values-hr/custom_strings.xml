@@ -19,4 +19,6 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="button_home_wake_title">Buđenje tipkom Home</string>
+  <string name="show_battery_percentage">Prikaži ugrađeni postotak baterije</string>
+  <string name="show_battery_percentage_summary">Prikazivanje postotka razine baterije na ikoni trake statusa kada se ne puni</string>
 </resources>

@@ -149,4 +149,6 @@
   <string name="omniswitch_dialog_running">OmniSwitch nem fut. Kérjük, győződjön meg róla, hogy engedélyezte, mielőtt az előzményekhez használná.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch nincs telepítve.</string>
   <string name="omniswitch_title">OmniSwitch</string>
+  <string name="show_battery_percentage">A beépített akkumulátor töltöttségi szintjének megjelenítése</string>
+  <string name="show_battery_percentage_summary">Az akkumulátor töltöttségi szintjének megjelenítése az állapotsori ikonban, amikor az eszköz nem töltődik</string>
 </resources>
