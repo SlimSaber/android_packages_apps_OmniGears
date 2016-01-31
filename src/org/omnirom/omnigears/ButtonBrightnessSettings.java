@@ -63,16 +63,14 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
 
     private static final String KEY_BUTTON_NO_BRIGHTNESS = "button_no_brightness";
     private static final String KEY_BUTTON_LINK_BRIGHTNESS = "button_link_brightness";
-    private static final String KEY_BUTTON_MANUAL_BRIGHTNESS = "button_manual_brightness";
+    private static final String KEY_BUTTON_MANUAL_BRIGHTNESS_NEW = "button_manual_brightness_new";
     private static final String KEY_BUTTON_TIMEOUT = "button_timeout";
 
     private CheckBoxPreference mNoButtonBrightness;
     private CheckBoxPreference mLinkButtonBrightness;
-    private Preference mManualButtonBrightness;
-    private ManualButtonBrightnessDialog mManualBrightnessDialog;
     private IPowerManager mPowerService;
     private SeekBarPreference mButtonTimoutBar;
-    private int mCurrentBrightness;
+    private SeekBarPreference mManualButtonBrightnessNew;
 
     @Override
     protected int getMetricsCategory() {
@@ -94,12 +92,13 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
         mLinkButtonBrightness.setChecked(Settings.System.getInt(resolver,
                 Settings.System.CUSTOM_BUTTON_USE_SCREEN_BRIGHTNESS, 0) != 0);
 
-        mManualButtonBrightness = (Preference) findPreference(KEY_BUTTON_MANUAL_BRIGHTNESS);
+        mManualButtonBrightnessNew = (SeekBarPreference) findPreference(KEY_BUTTON_MANUAL_BRIGHTNESS_NEW);
         final int customButtonBrightness = getResources().getInteger(
                 com.android.internal.R.integer.config_button_brightness_default);
-        mCurrentBrightness = Settings.System.getInt(getContext().getContentResolver(),
+        final int currentBrightness = Settings.System.getInt(getContext().getContentResolver(),
                 Settings.System.CUSTOM_BUTTON_BRIGHTNESS, customButtonBrightness);
-        mManualButtonBrightness.setSummary(String.valueOf(mCurrentBrightness));
+        mManualButtonBrightnessNew.setValue(currentBrightness);
+        mManualButtonBrightnessNew.setOnPreferenceChangeListener(this);
 
         mButtonTimoutBar = (SeekBarPreference) findPreference(KEY_BUTTON_TIMEOUT);
         int currentTimeout = Settings.System.getInt(resolver,
@@ -116,38 +115,21 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
         if (mNoButtonBrightness.isChecked()){
             mLinkButtonBrightness.setEnabled(false);
             mButtonTimoutBar.setEnabled(false);
-            mManualButtonBrightness.setEnabled(false);
+            mManualButtonBrightnessNew.setEnabled(false);
         } else if (mLinkButtonBrightness.isChecked()){
             mNoButtonBrightness.setEnabled(false);
-            mManualButtonBrightness.setEnabled(false);
+            mManualButtonBrightnessNew.setEnabled(false);
         } else {
             mNoButtonBrightness.setEnabled(true);
             mLinkButtonBrightness.setEnabled(true);
             mButtonTimoutBar.setEnabled(true);
-            mManualButtonBrightness.setEnabled(true);
-        }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-
-        if (mManualBrightnessDialog != null) {
-            mManualBrightnessDialog.dismiss();
+            mManualButtonBrightnessNew.setEnabled(true);
         }
     }
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mManualButtonBrightness) {
-            showButtonManualBrightnessDialog();
-            return true;
-        } else if (preference == mNoButtonBrightness) {
+        if (preference == mNoButtonBrightness) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.CUSTOM_BUTTON_DISABLE_BRIGHTNESS, checked ? 1:0);
@@ -171,162 +153,14 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
             int buttonTimeout = (Integer) objValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.BUTTON_BACKLIGHT_TIMEOUT, buttonTimeout);
+        } else if (preference == mManualButtonBrightnessNew) {
+            int buttonBrightness = (Integer) objValue;
+            Settings.System.putInt(getContext().getContentResolver(),
+                    Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
         } else {
             return false;
         }
         return true;
     }
-
-    private void showButtonManualBrightnessDialog() {
-        if (mManualBrightnessDialog != null && mManualBrightnessDialog.isShowing()) {
-            return;
-        }
-
-        mManualBrightnessDialog = new ManualButtonBrightnessDialog(getActivity());
-        mManualBrightnessDialog.show();
-    }
-
-    private class ManualButtonBrightnessDialog extends AlertDialog implements DialogInterface.OnClickListener {
-
-        private SeekBar mBacklightBar;
-        private EditText mBacklightInput;
-        private boolean mIsDragging = false;
-
-        public ManualButtonBrightnessDialog(Context context) {
-            super(context);
-        }
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            final View v = getLayoutInflater().inflate(R.layout.dialog_manual_brightness, null);
-            final Context context = getContext();
-
-            mBacklightBar = (SeekBar) v.findViewById(R.id.backlight);
-            mBacklightInput = (EditText) v.findViewById(R.id.backlight_input);
-
-            setTitle(R.string.dialog_manual_brightness_title);
-            setCancelable(true);
-            setView(v);
-
-            mBacklightBar.setMax(brightnessToProgress(PowerManager.BRIGHTNESS_ON));
-            mBacklightBar.setProgress(brightnessToProgress(mCurrentBrightness));
-            mBacklightInput.setText(String.valueOf(mCurrentBrightness));
-
-            initListeners();
-
-            setButton(DialogInterface.BUTTON_POSITIVE, context.getString(R.string.ok), this);
-            setButton(DialogInterface.BUTTON_NEGATIVE, context.getString(R.string.cancel), this);
-
-            super.onCreate(savedInstanceState);
-        }
-
-        private int brightnessToProgress(int brightness) {
-            return brightness * 100;
-        }
-
-        private int progressToBrightness(int progress) {
-            int brightness = progress / 100;
-            return brightness;
-        }
-
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            if (which == DialogInterface.BUTTON_POSITIVE) {
-                try {
-                    mCurrentBrightness = Integer.valueOf(mBacklightInput.getText().toString());
-                    Settings.System.putInt(getContext().getContentResolver(),
-                            Settings.System.CUSTOM_BUTTON_BRIGHTNESS, mCurrentBrightness);
-                    mManualButtonBrightness.setSummary(String.valueOf(mCurrentBrightness));
-                } catch (NumberFormatException e) {
-                    Log.d(TAG, "NumberFormatException " + e);
-                }
-            }
-        }
-
-        private void initListeners() {
-            mBacklightBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                @Override
-                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                    if (mIsDragging) {
-                        int brightness = progressToBrightness(seekBar.getProgress());
-                        mBacklightInput.setText(String.valueOf(brightness));
-                        try {
-                            mPowerService.setTemporaryButtonBrightnessSettingOverride(brightness);
-                        } catch(Exception e){
-                        }
-                    }
-                }
-                @Override
-                public void onStartTrackingTouch(SeekBar seekBar) {
-                    int brightness = progressToBrightness(seekBar.getProgress());
-                    try {
-                        mPowerService.setTemporaryButtonBrightnessSettingOverride(brightness);
-                    } catch(Exception e){
-                    }
-                    mIsDragging = true;
-                }
-                @Override
-                public void onStopTrackingTouch(SeekBar seekBar) {
-                    try {
-                        mPowerService.setTemporaryButtonBrightnessSettingOverride(mCurrentBrightness);
-                    } catch(Exception e){
-                    }
-                    mIsDragging = false;
-                }
-            });
-
-            mBacklightInput.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                }
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-                }
-                @Override
-                public void afterTextChanged(Editable s) {
-                    boolean ok = false;
-                    try {
-                        int minValue = 0;
-                        int maxValue = PowerManager.BRIGHTNESS_ON;
-                        int newBrightness = Integer.valueOf(s.toString());
-
-                        if (newBrightness >= minValue && newBrightness <= maxValue) {
-                            ok = true;
-                            mBacklightBar.setProgress(brightnessToProgress(newBrightness));
-                        }
-                    } catch (NumberFormatException e) {
-                        //ignored, ok is false ayway
-                    }
-
-                    Button okButton = mManualBrightnessDialog.getButton(DialogInterface.BUTTON_POSITIVE);
-                    if (okButton != null) {
-                        okButton.setEnabled(ok);
-                    }
-                }
-            });
-        }
-    }
-    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider() {
-                @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                        boolean enabled) {
-                    ArrayList<SearchIndexableResource> result =
-                            new ArrayList<SearchIndexableResource>();
-                    boolean buttonBrightnessSupport = context.getResources().getBoolean(com.android.internal.R.bool.config_button_brightness_support);
-                    if (buttonBrightnessSupport) {
-                        SearchIndexableResource sir = new SearchIndexableResource(context);
-                        sir.xmlResId = R.xml.button_brightness_settings;
-                        result.add(sir);
-                    }
-                    return result;
-                }
-
-                @Override
-                public List<String> getNonIndexableKeys(Context context) {
-                    ArrayList<String> result = new ArrayList<String>();
-                    return result;
-                }
-            };
 }
 

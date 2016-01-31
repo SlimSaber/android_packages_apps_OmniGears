@@ -19,9 +19,12 @@
         android:title="@string/button_brightness_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-        <Preference
-                android:key="button_manual_brightness"
-                android:title="@string/button_manual_brightness" />
+        <com.android.settings.preference.SeekBarPreference
+                android:key="button_manual_brightness_new"
+                android:title="@string/button_manual_brightness"
+                android:max="255"
+                settings:min="0"
+                android:persistent="false" />
         <CheckBoxPreference
                 android:key="button_no_brightness"
                 android:title="@string/button_no_brightness"
