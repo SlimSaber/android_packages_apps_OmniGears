@@ -258,8 +258,6 @@
     <string name="show_carrier_enabled">Both</string>
 
     <string name="recents_category">Recents</string>
-    <string name="recents_search_bar_title">Show search bar</string>
-    <string name="recents_search_bar_summary"></string>
     <string name="recents_fullscreen_title">Fullscreen</string>
     <string name="recents_fullscreen_summary"></string>
 
