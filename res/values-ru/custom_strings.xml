@@ -39,7 +39,6 @@
   <string name="keys_app_switch_long_press_title">Кнопка переключения приложений (долгое нажатие)</string>
   <string name="keys_action_nothing">Без действия</string>
   <string name="keys_action_menu">Открыть/закрыть меню</string>
-  <string name="keys_action_app_switch">Список запущенных приложений из AOSP</string>
   <string name="keys_action_search">Запустить поиск</string>
   <string name="keys_action_voice_search">Голосовой поиск</string>
   <string name="keys_action_in_app_search">Поиск в приложении</string>
@@ -122,7 +121,6 @@
   <string name="led_color_green">Зелёный</string>
   <string name="led_color_red">Красный</string>
   <string name="led_color_blue">Синий</string>
-  <string name="battery_title">Батарея на панели состояния</string>
   <string name="battery_style_title">Стиль</string>
   <string name="battery_percent_title">Показывать проценты</string>
   <string name="battery_percent_none">Никогда</string>
@@ -146,7 +144,5 @@
   <string name="navbar_title">Панель навигации</string>
   <string name="navbar_recents_style_title">Стиль списка запущенных приложений</string>
   <string name="omniswitch_settings">Настройки</string>
-  <string name="omniswitch_dialog_running">OmniSwitch не запущен. Пожалуйста, не забудьте включить его перед включением его как списка запущенных приложений.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch не установлен.</string>
-  <string name="omniswitch_title">OmniSwitch</string>
 </resources>
