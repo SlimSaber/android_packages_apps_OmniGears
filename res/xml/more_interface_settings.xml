@@ -63,6 +63,13 @@
                 android:key="dashboard_columns"
                 android:title="@string/dashboard_columns_title"
                 android:dialogTitle="@string/dashboard_columns_title" />
+
+            <CheckBoxPreference
+                android:key="dashboard_columns_resize"
+                android:title="@string/dashboard_colums_resize_title"
+                android:summary="@string/dashboard_colums_resize_summary"
+                android:defaultValue="true" />
+
         </PreferenceCategory>
 </PreferenceScreen>
 

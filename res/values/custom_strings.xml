@@ -284,6 +284,8 @@
     <string name="dashboard_columns_tablet_default">Default</string>
     <string name="dashboard_columns_three">3</string>
     <string name="dashboard_columns_four">4</string>
+    <string name="dashboard_colums_resize_title">Orientation adjustment</string>
+    <string name="dashboard_colums_resize_summary">Automatically adjust settings columns based on orientation.</string>
 
     <!-- QS -->
     <string name="qs_settings_title">Quick Settings</string>
