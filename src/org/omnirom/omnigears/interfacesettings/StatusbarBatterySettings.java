@@ -26,6 +26,7 @@ import android.content.res.Resources;
 import android.net.TrafficStats;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceGroup;
@@ -60,10 +61,16 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
     private static final String STATUSBAR_BATTERY_STYLE = "statusbar_battery_style";
     private static final String STATUSBAR_BATTERY_PERCENT = "statusbar_battery_percent";
     private static final String STATUSBAR_CHARGING_COLOR = "statusbar_battery_charging_color";
+    private static final String STATUSBAT_BATTERY_PERCENT_INSIDE = "statusbar_battery_percent_inside";
+    private static final String STATUSBAT_BATTERY_SHOW_BOLT = "statusbar_battery_charging_image";
 
     private ListPreference mBatteryStyle;
     private ListPreference mBatteryPercent;
     private ColorPickerPreference mChargingColor;
+    private CheckBoxPreference mPercentInside;
+    private CheckBoxPreference mShowBolt;
+    private int mShowPercent;
+    private int mBatteryStyleValue;
 
     @Override
     protected int getMetricsCategory() {
@@ -79,18 +86,18 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
         ContentResolver resolver = getActivity().getContentResolver();
 
         mBatteryStyle = (ListPreference) findPreference(STATUSBAR_BATTERY_STYLE);
-        int batteryStyle = Settings.System.getInt(resolver,
+        mBatteryStyleValue = Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_BATTERY_STYLE, 0);
 
-        mBatteryStyle.setValue(Integer.toString(batteryStyle));
+        mBatteryStyle.setValue(Integer.toString(mBatteryStyleValue));
         mBatteryStyle.setSummary(mBatteryStyle.getEntry());
         mBatteryStyle.setOnPreferenceChangeListener(this);
 
         mBatteryPercent = (ListPreference) findPreference(STATUSBAR_BATTERY_PERCENT);
-        int batteryPercent = Settings.System.getInt(resolver,
+        mShowPercent = Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_BATTERY_PERCENT, 2);
 
-        mBatteryPercent.setValue(Integer.toString(batteryPercent));
+        mBatteryPercent.setValue(Integer.toString(mShowPercent));
         mBatteryPercent.setSummary(mBatteryPercent.getEntry());
         mBatteryPercent.setOnPreferenceChangeListener(this);
 
@@ -101,6 +108,12 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
         String hexColor = String.format("#%08X", chargingColor);
         mChargingColor.setSummary(hexColor);
         mChargingColor.setOnPreferenceChangeListener(this);
+
+        mPercentInside = (CheckBoxPreference) findPreference(STATUSBAT_BATTERY_PERCENT_INSIDE);
+        mPercentInside.setEnabled(mBatteryStyleValue < 3 && mShowPercent != 0);
+
+        mShowBolt = (CheckBoxPreference) findPreference(STATUSBAT_BATTERY_SHOW_BOLT);
+        mShowBolt.setEnabled(mBatteryStyleValue < 3);
     }
 
     @Override
@@ -113,19 +126,22 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mBatteryStyle) {
-            int value = Integer.valueOf((String) newValue);
+            mBatteryStyleValue = Integer.valueOf((String) newValue);
             int index = mBatteryStyle.findIndexOfValue((String) newValue);
+            mPercentInside.setEnabled(mBatteryStyleValue < 3 && mShowPercent != 0);
+            mShowBolt.setEnabled(mBatteryStyleValue < 3);
             mBatteryStyle.setSummary(
                     mBatteryStyle.getEntries()[index]);
             Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUSBAR_BATTERY_STYLE, value);
+                    Settings.System.STATUSBAR_BATTERY_STYLE, mBatteryStyleValue);
         } else if (preference == mBatteryPercent) {
-            int value = Integer.valueOf((String) newValue);
+            mShowPercent = Integer.valueOf((String) newValue);
             int index = mBatteryPercent.findIndexOfValue((String) newValue);
+            mPercentInside.setEnabled(mBatteryStyleValue < 3 && mShowPercent != 0);
             mBatteryPercent.setSummary(
                     mBatteryPercent.getEntries()[index]);
             Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUSBAR_BATTERY_PERCENT, value);
+                    Settings.System.STATUSBAR_BATTERY_PERCENT, mShowPercent);
         } else if (preference == mChargingColor) {
             String hexColor = String.format("#%08X", mChargingColor.getColor());
             mChargingColor.setSummary(hexColor);

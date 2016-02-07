@@ -161,6 +161,7 @@
 
     <string name="statusbar_title">Status bar</string>
     <string name="battery_title">Battery display</string>
+    <string name="statusbar_battery_summary">Set style of status bar battery display</string>
     <string name="battery_style_title">Style</string>
     <string name="battery_percent_title">Show percent</string>
     <string name="battery_percent_none">Never</string>
@@ -171,7 +172,9 @@
     <string name="statusbar_charging_image_title">Charging indicator</string>
     <string name="statusbar_category_charging_title">Charging</string>
     <string name="statusbar_charging_image_summary">Display bolt indicator while charging. Hides percent overlay</string>
-    <string name="statusbar_battery_charging_color_title">Color battery while charging</string>
+    <string name="statusbar_battery_charging_color_title">Color</string>
+    <string name="statusbar_battery_charging_color_enable_title">Color while charging</string>
+    <string name="statusbar_battery_charging_color_enable_summary"></string>
 
     <string name="button_brightness_title">Brightness</string>
     <string name="button_brightness_summary">Button backlight brightness</string>

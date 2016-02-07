@@ -34,10 +34,11 @@
                 android:summary="@string/double_tap_to_sleep_summary"
                 android:defaultValue="false" />
 
-            <!--<PreferenceScreen
+            <PreferenceScreen
                 android:key="statusbar_battery"
                 android:title="@string/battery_title"
-                android:fragment="org.omnirom.omnigears.interfacesettings.StatusbarBatterySettings" />-->
+                android:summary="@string/statusbar_battery_summary"
+                android:fragment="org.omnirom.omnigears.interfacesettings.StatusbarBatterySettings" />
 
             <PreferenceScreen
                     android:title="@string/status_bar_icon_blacklist_title"

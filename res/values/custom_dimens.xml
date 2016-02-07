@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2014 The OmniROM Project
+<!--  Copyright (C) 2016 The OmniROM Project
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -16,9 +16,9 @@
  -->
 
 <resources>
-    <dimen name="color_preference_width">16dip</dimen>
-    <dimen name="color_preference_height">16dip</dimen>
-    <dimen name="color_preference_height_large">32dip</dimen>
+    <dimen name="alert_dialog_padding_material">20dp</dimen>
+    <dimen name="color_preference_width">18dip</dimen>
+    <dimen name="color_preference_height">18dip</dimen>
 
     <dimen name="qs_tile_max_size">120dp</dimen>
     <dimen name="qs_tile_max_padding">10dp</dimen>
