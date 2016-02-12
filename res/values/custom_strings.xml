@@ -388,4 +388,18 @@
     <!-- Statusbar clock -->
     <string name="status_bar_style_title">Statusbar style</string>
 
+    <!-- global acions config -->
+    <string name="global_actions_power_title">Power</string>
+    <string name="global_actions_reboot_title">Reboot</string>
+    <string name="global_actions_lockdown_title">Lock</string>
+    <string name="global_actions_settings_title">Settings</string>
+    <string name="global_actions_airplane_title">Airplane mode</string>
+    <string name="global_actions_users_title">Users</string>
+    <string name="global_actions_voiceassist_title">Voiceassist</string>
+    <string name="global_actions_silent_title">Silent mode</string>
+    <string name="global_actions_dnd_title">Do not disturb</string>
+    <string name="global_actions_title">Power menu</string>
+    <string name="global_actions_summary">Actions shown in power menu</string>
+    <string name="global_actions_header">Some actions are only visible depending on the setup or only if the device is unlocked</string>
+
 </resources>

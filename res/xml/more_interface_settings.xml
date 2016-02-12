@@ -70,6 +70,12 @@
                 android:summary="@string/dashboard_colums_resize_summary"
                 android:defaultValue="true" />
 
+            <PreferenceScreen
+                android:key="global_actions"
+                android:title="@string/global_actions_title"
+                android:summary="@string/global_actions_summary"
+                android:fragment="org.omnirom.omnigears.interfacesettings.GlobalActionsSettings" />
+
         </PreferenceCategory>
 </PreferenceScreen>
 
