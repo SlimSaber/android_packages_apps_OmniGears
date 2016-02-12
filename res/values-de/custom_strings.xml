@@ -149,6 +149,4 @@
   <string name="omniswitch_dialog_running">OmniSwitch wird nicht ausgeführt. Stellen Sie bitte sicher dass es aktiviert ist bevor Sie es für die zuletzt verwendeten Apps benutzen.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch ist nicht installiert.</string>
   <string name="omniswitch_title">OmniSwitch</string>
-  <string name="show_battery_percentage">Eingebettete Akku-Prozentzahl anzeigen</string>
-  <string name="show_battery_percentage_summary">Prozentzahl für Akkustand in Statusleistensymbol anzeigen, wenn das Gerät nicht geladen wird</string>
 </resources>

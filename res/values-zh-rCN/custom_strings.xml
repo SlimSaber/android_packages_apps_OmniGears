@@ -108,6 +108,4 @@
   <string name="pulse_only_mode">脉冲（默认值）</string>
   <string name="swap_volume_buttons_title">匹配旋转</string>
   <string name="swap_volume_buttons_summary">根据旋转方向调整音量按键的作用</string>
-  <string name="show_battery_percentage">嵌入式显示电池电量百分比 显示嵌入的电池电量百分比</string>
-  <string name="show_battery_percentage_summary">未充电时在状态栏图标内显示电池电量百分比</string>
 </resources>

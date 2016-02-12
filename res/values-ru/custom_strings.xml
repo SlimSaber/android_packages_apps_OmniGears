@@ -149,6 +149,4 @@
   <string name="omniswitch_dialog_running">OmniSwitch не запущен. Пожалуйста, не забудьте включить его перед включением его как списка запущенных приложений.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch не установлен.</string>
   <string name="omniswitch_title">OmniSwitch</string>
-  <string name="show_battery_percentage">Показывать уровень заряда батареи в процентах</string>
-  <string name="show_battery_percentage_summary">Когда устройство работает в автономном режиме, процент заряда батареи показан в строке состояния</string>
 </resources>

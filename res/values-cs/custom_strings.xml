@@ -149,6 +149,4 @@
   <string name="omniswitch_dialog_running">Aplikace OmniSwitch není spuštěna. Prosím ujistěte se, aby byla před použitím povolena.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch není nainstalována.</string>
   <string name="omniswitch_title">OmniSwitch</string>
-  <string name="show_battery_percentage">Zobrazovat vložené procento nabití baterie</string>
-  <string name="show_battery_percentage_summary">Když neprobíhá nabíjení, zobrazit v ikoně na stavovém řádku procento nabití baterie</string>
 </resources>

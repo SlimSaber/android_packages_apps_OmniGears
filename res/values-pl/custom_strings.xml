@@ -149,6 +149,4 @@
   <string name="omniswitch_dialog_running">OmniSwitch nie jest uruchomiony. Upewnij się, że włączyłeś go przed aktywowaniem go jako ostatnio otwarte aplikacje.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch nie jest zainstalowany.</string>
   <string name="omniswitch_title">OmniSwitch</string>
-  <string name="show_battery_percentage">Pokaż procent naładowania baterii</string>
-  <string name="show_battery_percentage_summary">Pokaż procent naładowania baterii w ikonie na pasku stanu, gdy telefon się nie ładuje</string>
 </resources>

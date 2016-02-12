@@ -143,6 +143,4 @@
   <string name="omniswitch_dialog_running">OmniSwitch n\'est pas en cours d\'exécution. Merci de le démarrer avant de l\'activer pour les applications récentes.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch n\'est pas installé.</string>
   <string name="omniswitch_title">OmniSwitch</string>
-  <string name="show_battery_percentage">Afficher le pourcentage intégré de la batterie</string>
-  <string name="show_battery_percentage_summary">Affichez le pourcentage correspondant au niveau de la batterie dans l\'icône de la barre d\'état lorsque l\'appareil n\'est pas en charge.</string>
 </resources>
