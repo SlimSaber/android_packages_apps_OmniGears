@@ -106,8 +106,12 @@ public class BarsSettings extends SettingsPreferenceFragment implements
             settingHeaderPackage = DEFAULT_HEADER_PACKAGE;
         }
         mDaylightHeaderPack = (ListPreference) findPreference(DAYLIGHT_HEADER_PACK);
-        mDaylightHeaderPack.setEntries(getAvailableHeaderPacksEntries());
-        mDaylightHeaderPack.setEntryValues(getAvailableHeaderPacksValues());
+
+        List<String> entries = new ArrayList<String>();
+        List<String> values = new ArrayList<String>();
+        getAvailableHeaderPacks(entries, values);
+        mDaylightHeaderPack.setEntries(entries.toArray(new String[entries.size()]));
+        mDaylightHeaderPack.setEntryValues(values.toArray(new String[values.size()]));
 
         int valueIndex = mDaylightHeaderPack.findIndexOfValue(settingHeaderPackage);
         if (valueIndex == -1) {
@@ -148,40 +152,38 @@ public class BarsSettings extends SettingsPreferenceFragment implements
         return true;
     }
 
-    private String[] getAvailableHeaderPacksValues() {
-        List<String> headerPacks = new ArrayList<String>();
+    private void getAvailableHeaderPacks(List<String> entries, List<String> values) {
         Intent i = new Intent();
         PackageManager packageManager = getPackageManager();
         i.setAction("org.omnirom.DaylightHeaderPack");
         for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
             String packageName = r.activityInfo.packageName;
             if (packageName.equals(DEFAULT_HEADER_PACKAGE)) {
-                headerPacks.add(0, packageName);
+                values.add(0, packageName);
             } else {
-                headerPacks.add(packageName);
+                values.add(packageName);
             }
-        }
-        return headerPacks.toArray(new String[headerPacks.size()]);
-    }
-
-    private String[] getAvailableHeaderPacksEntries() {
-        List<String> headerPacks = new ArrayList<String>();
-        Intent i = new Intent();
-        PackageManager packageManager = getPackageManager();
-        i.setAction("org.omnirom.DaylightHeaderPack");
-        for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
-            String packageName = r.activityInfo.packageName;
             String label = r.activityInfo.loadLabel(getPackageManager()).toString();
             if (label == null) {
                 label = r.activityInfo.packageName;
             }
             if (packageName.equals(DEFAULT_HEADER_PACKAGE)) {
-                headerPacks.add(0, label);
+                entries.add(0, label);
             } else {
-                headerPacks.add(label);
+                entries.add(label);
             }
         }
-        return headerPacks.toArray(new String[headerPacks.size()]);
+        i.setAction("org.omnirom.DaylightHeaderPack1");
+        for (ResolveInfo r : packageManager.queryIntentActivities(i, 0)) {
+            String packageName = r.activityInfo.packageName;
+            values.add(packageName  + "/" + r.activityInfo.name);
+
+            String label = r.activityInfo.loadLabel(getPackageManager()).toString();
+            if (label == null) {
+                label = packageName;
+            }
+            entries.add(label);
+        }
     }
 
     public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
