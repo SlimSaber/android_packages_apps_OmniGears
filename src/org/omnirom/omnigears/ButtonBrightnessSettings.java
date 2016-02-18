@@ -82,7 +82,7 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
         addPreferencesFromResource(R.xml.button_brightness_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
-        ContentResolver resolver = getActivity().getContentResolver();
+        ContentResolver resolver = getContentResolver();
 
         mNoButtonBrightness = (CheckBoxPreference) findPreference(KEY_BUTTON_NO_BRIGHTNESS);
         mNoButtonBrightness.setChecked(Settings.System.getInt(resolver,
@@ -95,7 +95,7 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
         mManualButtonBrightnessNew = (SeekBarPreference) findPreference(KEY_BUTTON_MANUAL_BRIGHTNESS_NEW);
         final int customButtonBrightness = getResources().getInteger(
                 com.android.internal.R.integer.config_button_brightness_default);
-        final int currentBrightness = Settings.System.getInt(getContext().getContentResolver(),
+        final int currentBrightness = Settings.System.getInt(resolver,
                 Settings.System.CUSTOM_BUTTON_BRIGHTNESS, customButtonBrightness);
         mManualButtonBrightnessNew.setValue(currentBrightness);
         mManualButtonBrightnessNew.setOnPreferenceChangeListener(this);
@@ -131,13 +131,13 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mNoButtonBrightness) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.CUSTOM_BUTTON_DISABLE_BRIGHTNESS, checked ? 1:0);
             updateEnablement();
             return true;
         } else if (preference == mLinkButtonBrightness) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.CUSTOM_BUTTON_USE_SCREEN_BRIGHTNESS, checked ? 1:0);
             updateEnablement();
             return true;
@@ -155,7 +155,7 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
                     Settings.System.BUTTON_BACKLIGHT_TIMEOUT, buttonTimeout);
         } else if (preference == mManualButtonBrightnessNew) {
             int buttonBrightness = (Integer) objValue;
-            Settings.System.putInt(getContext().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
         } else {
             return false;

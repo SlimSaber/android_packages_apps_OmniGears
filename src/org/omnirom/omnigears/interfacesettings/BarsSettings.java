@@ -38,6 +38,7 @@ import android.preference.PreferenceCategory;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.util.Log;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
@@ -62,10 +63,12 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     private static final String DEFAULT_HEADER_PACKAGE = "com.android.systemui";
     private static final String CARRIER_LABEL = "carrier_options";
     private static final String NAVIGATIONBAR_ROOT = "category_navigationbar";
-    private static final String TABLET_NAVIGATION_BAR = "enable_tablet_navigationr";
+    private static final String TABLET_NAVIGATION_BAR = "enable_tablet_navigation";
+    private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
 
     private ListPreference mDaylightHeaderPack;
     private CheckBoxPreference mCustomHeaderImage;
+    private SeekBarPreference mHeaderShadow;
 
     @Override
     protected int getMetricsCategory() {
@@ -124,7 +127,12 @@ public class BarsSettings extends SettingsPreferenceFragment implements
         mDaylightHeaderPack.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
         mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntry());
         mDaylightHeaderPack.setOnPreferenceChangeListener(this);
-        mDaylightHeaderPack.setEnabled(customHeaderImage);
+
+        mHeaderShadow = (SeekBarPreference) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
+        final int headerShadow = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 0);
+        mHeaderShadow.setValue((int)((headerShadow / 255) * 100));
+        mHeaderShadow.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -133,7 +141,6 @@ public class BarsSettings extends SettingsPreferenceFragment implements
             final boolean value = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_CUSTOM_HEADER, value ? 1 : 0);
-            mDaylightHeaderPack.setEnabled(value);
             return true;
         }
         // If we didn't handle it, let preferences handle it.
@@ -148,6 +155,11 @@ public class BarsSettings extends SettingsPreferenceFragment implements
                     Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK, value);
             int valueIndex = mDaylightHeaderPack.findIndexOfValue(value);
             mDaylightHeaderPack.setSummary(mDaylightHeaderPack.getEntries()[valueIndex]);
+         } else if (preference == mHeaderShadow) {
+            Integer headerShadow = (Integer) newValue;
+            int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
         }
         return true;
     }
