@@ -52,7 +52,7 @@ import com.android.internal.util.omni.PackageUtils;
 import java.util.List;
 import java.util.ArrayList;
 
-import org.omnirom.omnigears.ui.ColorPickerPreference;
+import org.omnirom.omnigears.preference.ColorPickerPreference;
 
 public class StatusbarBatterySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {

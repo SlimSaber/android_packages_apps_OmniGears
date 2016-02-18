@@ -21,11 +21,17 @@
         android:key="lockscreen_shortcut"
         android:title="@string/lockscreen_shortcut_title" >
 
+        <com.android.settings.preference.SecureSettingSwitchPreference
+            android:key="lockscreen_shortcuts_enable"
+            android:title="@string/lockscreen_shortcuts_enable_title"
+            android:defaultValue="true"/>
+
         <com.android.settings.preference.SecureCheckBoxPreference
             android:key="lockscreen_voice_shortcut"
             android:title="@string/lockscreen_voice_shortcut_title"
             android:summary="@string/lockscreen_voice_shortcut_summary"
-            android:defaultValue="true"/>
+            android:defaultValue="true"
+            android:dependency="lockscreen_shortcuts_enable" />
 
     </PreferenceCategory>
 
@@ -42,6 +48,62 @@
             android:key="lockscreen_wallpaper_clear"
             android:title="@string/lockscreen_wallpaper_clear_title"
             android:persistent="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="lockscreen_clock"
+        android:title="@string/lockscreen_clock" >
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_clock_enable"
+            android:title="@string/lockscreen_clock_enable_title"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="lockscreen_clock_display_time"
+            android:title="@string/lockscreen_clock_display_time_title"
+            android:persistent="false"
+            android:defaultValue="true"
+            android:dependency="lockscreen_clock_enable" />
+
+        <CheckBoxPreference
+            android:key="lockscreen_clock_display_date"
+            android:title="@string/lockscreen_clock_display_date_title"
+            android:persistent="false"
+            android:defaultValue="true"
+            android:dependency="lockscreen_clock_enable" />
+
+        <CheckBoxPreference
+            android:key="lockscreen_clock_display_alarm"
+            android:title="@string/lockscreen_clock_display_alarm_title"
+            android:persistent="false"
+            android:defaultValue="true"
+            android:dependency="lockscreen_clock_enable" />
+
+        <org.omnirom.omnigears.preference.FontPreference
+            android:key="lockscreen_clock_font"
+            android:title="@string/lockscreen_clock_font_title"
+            android:persistent="false"
+            android:dependency="lockscreen_clock_enable" />
+
+        <org.omnirom.omnigears.preference.ColorPickerPreference
+            android:key="lockscreen_clock_color"
+            android:title="@string/lockscreen_clock_color_title"
+            android:persistent="false"
+            android:dependency="lockscreen_clock_enable" />
+
+        <org.omnirom.omnigears.preference.NumberPickerPreference
+            android:key="lockscreen_clock_size"
+            android:title="@string/lockscreen_clock_size_title"
+            android:persistent="false"
+            android:dependency="lockscreen_clock_enable" />
+
+        <com.android.settings.preference.SystemCheckBoxPreference
+            android:key="lockscreen_clock_shadow"
+            android:title="@string/lockscreen_clock_shadow_title"
+            android:defaultValue="false"
+            android:dependency="lockscreen_clock_enable" />
 
     </PreferenceCategory>
 </PreferenceScreen>

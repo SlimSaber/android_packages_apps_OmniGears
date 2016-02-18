@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.omnirom.omnigears.ui;
+package org.omnirom.omnigears.preference;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -37,7 +37,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.android.settings.R;
+import org.omnirom.omnigears.R;
+import org.omnirom.omnigears.ui.ColorPickerDialog;
 
 public class ColorPickerPreference extends Preference implements DialogInterface.OnDismissListener {
 

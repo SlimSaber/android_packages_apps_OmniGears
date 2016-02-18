@@ -16,8 +16,6 @@
  -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:key="interface_more"
-        android:title="@string/interface_more_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
         <PreferenceCategory

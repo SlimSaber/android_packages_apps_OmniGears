@@ -23,7 +23,7 @@
             android:title="@string/status_bar_show_clock_title"
             android:defaultValue="true" />
 
-        <org.omnirom.omnigears.ui.ColorPickerPreference
+        <org.omnirom.omnigears.preference.ColorPickerPreference
             android:key="clock_color"
             android:title="@string/clock_color_title"
             android:defaultValue="0xffffff"

@@ -45,7 +45,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
-import org.omnirom.omnigears.ui.ColorPickerPreference;
+import org.omnirom.omnigears.preference.ColorPickerPreference;
 
 import java.util.Date;
 

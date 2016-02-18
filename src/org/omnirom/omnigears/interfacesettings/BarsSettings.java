@@ -133,7 +133,7 @@ public class BarsSettings extends SettingsPreferenceFragment implements
         mHeaderShadow = (SeekBarPreference) findPreference(CUSTOM_HEADER_IMAGE_SHADOW);
         final int headerShadow = Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 0);
-        mHeaderShadow.setValue((int)((headerShadow / 255) * 100));
+        mHeaderShadow.setValue((int)(((double) headerShadow / 255) * 100));
         mHeaderShadow.setOnPreferenceChangeListener(this);
 
         mSmartPulldown = (ListPreference) findPreference(SMART_PULLDOWN);

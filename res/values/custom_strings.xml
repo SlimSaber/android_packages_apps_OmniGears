@@ -208,10 +208,20 @@
     <string name="lockscreen_wallpaper_clear_title">Clear lock screen wallpaper</string>
     <string name="reset_lockscreen_wallpaper">Set to default</string>
 
-    <!-- Lock screen shortcut -->
+    <!-- Lock screen config -->
     <string name="lockscreen_shortcut_title">Shortcuts</string>
     <string name="lockscreen_voice_shortcut_title">Voice assist shortcut</string>
     <string name="lockscreen_voice_shortcut_summary">Show voice assist instead of dialer shortcut</string>
+    <string name="lockscreen_shortcuts_enable_title">Enable</string>
+    <string name="lockscreen_clock_display_time_title">Display time</string>
+    <string name="lockscreen_clock_display_date_title">Display date</string>
+    <string name="lockscreen_clock_display_alarm_title">Display next alarm</string>
+    <string name="lockscreen_clock">Clock</string>
+    <string name="lockscreen_clock_font_title">Time font</string>
+    <string name="lockscreen_clock_color_title">Time and date color</string>
+    <string name="lockscreen_clock_size_title">Time size</string>
+    <string name="lockscreen_clock_enable_title">Enable</string>
+    <string name="lockscreen_clock_shadow_title">Shadow</string>
 
     <string name="notification_title">Notification panel</string>
     <string name="status_bar_custom_header_title">Custom header image</string>
@@ -412,5 +422,7 @@
     <string name="smart_pulldown_dismissable">No dismissable</string>
     <string name="smart_pulldown_persistent">No persistent</string>
     <string name="smart_pulldown_all">No dismissable or persistent</string>
+
+   <string name="font_sample_text">11:57</string>
 
 </resources>
