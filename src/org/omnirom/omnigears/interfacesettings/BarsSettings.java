@@ -65,10 +65,12 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     private static final String NAVIGATIONBAR_ROOT = "category_navigationbar";
     private static final String TABLET_NAVIGATION_BAR = "enable_tablet_navigation";
     private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
+    private static final String SMART_PULLDOWN = "smart_pulldown";
 
     private ListPreference mDaylightHeaderPack;
     private CheckBoxPreference mCustomHeaderImage;
     private SeekBarPreference mHeaderShadow;
+    private ListPreference mSmartPulldown;
 
     @Override
     protected int getMetricsCategory() {
@@ -133,6 +135,13 @@ public class BarsSettings extends SettingsPreferenceFragment implements
                 Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, 0);
         mHeaderShadow.setValue((int)((headerShadow / 255) * 100));
         mHeaderShadow.setOnPreferenceChangeListener(this);
+
+        mSmartPulldown = (ListPreference) findPreference(SMART_PULLDOWN);
+        mSmartPulldown.setOnPreferenceChangeListener(this);
+        int smartPulldown = Settings.Secure.getInt(getContentResolver(),
+                Settings.Secure.QS_SMART_PULLDOWN, 0);
+        mSmartPulldown.setValue(String.valueOf(smartPulldown));
+        updateSmartPulldownSummary(smartPulldown);
     }
 
     @Override
@@ -160,6 +169,12 @@ public class BarsSettings extends SettingsPreferenceFragment implements
             int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
+         } else if (preference == mSmartPulldown) {
+            int smartPulldown = Integer.valueOf((String) newValue);
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.QS_SMART_PULLDOWN, smartPulldown);
+            updateSmartPulldownSummary(smartPulldown);
+            return true;
         }
         return true;
     }
@@ -195,6 +210,31 @@ public class BarsSettings extends SettingsPreferenceFragment implements
                 label = packageName;
             }
             entries.add(label);
+        }
+    }
+
+    private void updateSmartPulldownSummary(int value) {
+        Resources res = getResources();
+
+        if (value == 0) {
+            // Smart pulldown deactivated
+            mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_off));
+        } else {
+            String type = null;
+            switch (value) {
+                case 1:
+                    type = res.getString(R.string.smart_pulldown_dismissable);
+                    break;
+                case 2:
+                    type = res.getString(R.string.smart_pulldown_persistent);
+                    break;
+                default:
+                    type = res.getString(R.string.smart_pulldown_all);
+                    break;
+            }
+            // Remove title capitalized formatting
+            type = type.toLowerCase();
+            mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
         }
     }
 
