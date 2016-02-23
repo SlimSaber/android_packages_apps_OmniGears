@@ -42,6 +42,14 @@
             android:key="airplane"
             android:title="@string/global_actions_airplane_title"
             android:persistent="false" />
+	<SwitchPreference
+            android:key="screenshot"
+            android:title="@string/global_actions_screenshot_title"
+            android:persistent="false" />
+        <SwitchPreference
+            android:key="screenrecord"
+            android:title="@string/global_actions_screenrecord_title"
+            android:persistent="false" />
         <SwitchPreference
             android:key="users"
             android:title="@string/global_actions_users_title"

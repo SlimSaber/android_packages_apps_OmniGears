@@ -408,6 +408,8 @@
     <string name="global_actions_lockdown_title">Lock</string>
     <string name="global_actions_settings_title">Settings</string>
     <string name="global_actions_airplane_title">Airplane mode</string>
+    <string name="global_actions_screenshot_title">Screenshot</string>
+    <string name="global_actions_screenrecord_title">Screenrecord</string>
     <string name="global_actions_users_title">Users</string>
     <string name="global_actions_voiceassist_title">Voiceassist</string>
     <string name="global_actions_silent_title">Silent mode</string>
