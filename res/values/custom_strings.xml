@@ -175,6 +175,7 @@
     <string name="statusbar_battery_charging_color_title">Color</string>
     <string name="statusbar_battery_charging_color_enable_title">Color while charging</string>
     <string name="statusbar_battery_charging_color_enable_summary"></string>
+    <string name="battery_enable_title">Show battery</string>
 
     <string name="button_brightness_title">Brightness</string>
     <string name="button_brightness_summary">Button backlight brightness</string>
