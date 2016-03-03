@@ -27,12 +27,43 @@
             android:defaultValue="true"/>
 
         <com.android.settings.preference.SecureCheckBoxPreference
+            android:key="lockscreen_camera_shortcut_enable"
+            android:title="@string/lockscreen_camera_shortcut_enable_title"
+            android:summary="@string/lockscreen_camera_shortcut_enable_summary"
+            android:defaultValue="true"
+            android:dependency="lockscreen_shortcuts_enable" />
+
+        <com.android.settings.preference.SecureCheckBoxPreference
+            android:key="lockscreen_left_shortcut_enable"
+            android:title="@string/lockscreen_left_shortcut_enable_title"
+            android:summary="@string/lockscreen_left_shortcut_enable_summary"
+            android:defaultValue="true"
+            android:dependency="lockscreen_shortcuts_enable" />
+
+        <com.android.settings.preference.SecureCheckBoxPreference
             android:key="lockscreen_voice_shortcut"
             android:title="@string/lockscreen_voice_shortcut_title"
             android:summary="@string/lockscreen_voice_shortcut_summary"
             android:defaultValue="true"
-            android:dependency="lockscreen_shortcuts_enable" />
+            android:dependency="lockscreen_left_shortcut_enable" />
 
+        <Preference
+            android:key="lockscreen_shortcuts"
+            android:title="@string/lockscreen_shortcuts_title"
+            android:summary="@string/lockscreen_shortcuts_summary"
+            android:persistent="false"
+            android:dependency="lockscreen_shortcuts_enable" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="lockscreen_other"
+        android:title="@string/other_category" >
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_indicator_display"
+            android:title="@string/lockscreen_indicator_display_title"
+            android:summary="@string/lockscreen_indicator_display_summary"
+            android:defaultValue="true" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -106,4 +137,5 @@
             android:dependency="lockscreen_clock_enable" />
 
     </PreferenceCategory>
+
 </PreferenceScreen>

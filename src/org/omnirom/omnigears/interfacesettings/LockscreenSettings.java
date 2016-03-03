@@ -32,6 +32,7 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.provider.SearchIndexableResource;
+import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.android.internal.logging.MetricsLogger;
@@ -40,12 +41,17 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
 import org.omnirom.omnigears.R;
+import org.omnirom.omnigears.preference.AppMultiSelectListPreference;
 import org.omnirom.omnigears.preference.FontPreference;
 import org.omnirom.omnigears.preference.NumberPickerPreference;
 import org.omnirom.omnigears.preference.ColorPickerPreference;
+import org.omnirom.omnigears.ui.ShortcutDialog;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
 
 public class LockscreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
@@ -60,6 +66,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
     private static final String KEY_CLOCK_DISPLAY_TIME = "lockscreen_clock_display_time";
     private static final String KEY_CLOCK_DISPLAY_DATE = "lockscreen_clock_display_date";
     private static final String KEY_CLOCK_DISPLAY_ALARM = "lockscreen_clock_display_alarm";
+    private static final String KEY_SHORTCUTS = "lockscreen_shortcuts";
 
     private Preference mSetWallpaper;
     private Preference mClearWallpaper;
@@ -69,6 +76,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mClockDisplayTime;
     private CheckBoxPreference mClockDisplayDate;
     private CheckBoxPreference mClockDisplayAlarm;
+    private Preference mShortcuts;
 
     @Override
     protected int getMetricsCategory() {
@@ -123,6 +131,8 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
         mClockDisplayTime.setChecked((clockDisplay & Settings.System.LOCK_CLOCK_TIME) == Settings.System.LOCK_CLOCK_TIME);
         mClockDisplayDate.setChecked((clockDisplay & Settings.System.LOCK_CLOCK_DATE) == Settings.System.LOCK_CLOCK_DATE);
         mClockDisplayAlarm.setChecked((clockDisplay & Settings.System.LOCK_CLOCK_ALARM) == Settings.System.LOCK_CLOCK_ALARM);
+
+        mShortcuts = findPreference(KEY_SHORTCUTS);
     }
 
     @Override
@@ -147,6 +157,10 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
         } else if (preference == mClockDisplayAlarm) {
             Settings.System.putInt(resolver,
                     Settings.System.LOCK_CLOCK_DISPLAY, getCurrentClockDisplayValue());
+            return true;
+        } else if (preference == mShortcuts) {
+            ShortcutDialog d = new ShortcutDialog(getContext());
+            d.show();
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);

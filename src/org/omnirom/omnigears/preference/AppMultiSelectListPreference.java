@@ -44,6 +44,7 @@ import com.android.settings.R;
 
 import java.text.Collator;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
@@ -78,12 +79,12 @@ public class AppMultiSelectListPreference extends DialogPreference {
         Collections.sort(mPackageInfoList, sDisplayNameComparator);
     }
 
-    public void setValues(Set<String> values) {
+    public void setValues(Collection<String> values) {
         mValues.clear();
         mValues.addAll(values);
     }
 
-    public Set<String> getValues() {
+    public Collection<String> getValues() {
         return mValues;
     }
 

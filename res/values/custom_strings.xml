@@ -212,7 +212,7 @@
     <!-- Lock screen config -->
     <string name="lockscreen_shortcut_title">Shortcuts</string>
     <string name="lockscreen_voice_shortcut_title">Voice assist shortcut</string>
-    <string name="lockscreen_voice_shortcut_summary">Show voice assist instead of dialer shortcut</string>
+    <string name="lockscreen_voice_shortcut_summary">Show voice assist instead of dialer</string>
     <string name="lockscreen_shortcuts_enable_title">Enable</string>
     <string name="lockscreen_clock_display_time_title">Display time</string>
     <string name="lockscreen_clock_display_date_title">Display date</string>
@@ -223,6 +223,17 @@
     <string name="lockscreen_clock_size_title">Time size</string>
     <string name="lockscreen_clock_enable_title">Enable</string>
     <string name="lockscreen_clock_shadow_title">Shadow</string>
+    <string name="lockscreen_shortcuts_title">Custom application shortcuts</string>
+    <string name="lockscreen_shortcuts_summary">Applications shown on the lock screen for quick access. Long press to hide.</string>
+    <string name="lockscreen_shortcut_add_dialog_title">Add shortcut</string>
+    <string name="lockscreen_shortcut_apps_title">Shortcuts</string>
+    <string name="lockscreen_shortcut_add">Add\u2026</string>
+    <string name="lockscreen_indicator_display_title">Show bottom status text</string>
+    <string name="lockscreen_indicator_display_summary">Note: custom shortcuts will hide text</string>
+    <string name="lockscreen_camera_shortcut_enable_title">Show camera shortcut</string>
+    <string name="lockscreen_camera_shortcut_enable_summary">Visibility depends on system setup</string>
+    <string name="lockscreen_left_shortcut_enable_title">Show dialer or voice assist shortcut</string>
+    <string name="lockscreen_left_shortcut_enable_summary">Visibility depends on system setup</string>
 
     <string name="notification_title">Notification panel</string>
     <string name="status_bar_custom_header_title">Custom header image</string>
