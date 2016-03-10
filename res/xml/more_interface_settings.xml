@@ -68,6 +68,12 @@
                 android:summary="@string/dashboard_colums_resize_summary"
                 android:defaultValue="true" />
 
+            <CheckBoxPreference
+                android:key="dashboard_divider_show"
+                android:title="@string/dashboard_divider_show_title"
+                android:summary="@string/dashboard_divider_show_summary"
+                android:defaultValue="true" />
+
             <PreferenceScreen
                 android:key="global_actions"
                 android:title="@string/global_actions_title"

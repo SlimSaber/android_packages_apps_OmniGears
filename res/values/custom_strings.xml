@@ -303,6 +303,8 @@
     <string name="dashboard_columns_four">4</string>
     <string name="dashboard_colums_resize_title">Orientation adjustment</string>
     <string name="dashboard_colums_resize_summary">Automatically adjust settings columns based on orientation.</string>
+    <string name="dashboard_divider_show_title">Show columns divider</string>
+    <string name="dashboard_divider_show_summary"></string>
 
     <!-- QS -->
     <string name="qs_settings_title">Quick Settings</string>

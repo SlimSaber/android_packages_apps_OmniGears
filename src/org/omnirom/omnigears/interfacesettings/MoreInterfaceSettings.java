@@ -63,11 +63,13 @@ public class MoreInterfaceSettings extends SettingsPreferenceFragment implements
     private static final String CHRONUS_ICON_PACK_INTENT = "com.dvtonder.chronus.ICON_PACK";
     private static final String LOCK_CLOCK_PACKAGE="com.cyanogenmod.lockclock";
     private static final String DASHBOARD_COLUMNS = "dashboard_columns";
+    private static final String DASHBOARD_DIVIDER_SHOW = "dashboard_divider_show";
 
     private PreferenceCategory mWeatherCategory;
     private ListPreference mWeatherIconPack;
     private CheckBoxPreference mHeaderWeather;
     private ListPreference mDashboardColumns;
+    private CheckBoxPreference mDashBoardDividerShow;
 
     @Override
     protected int getMetricsCategory() {
@@ -132,6 +134,11 @@ public class MoreInterfaceSettings extends SettingsPreferenceFragment implements
         }
         mDashboardColumns.setSummary(mDashboardColumns.getEntry());
         mDashboardColumns.setOnPreferenceChangeListener(this);
+
+        mDashBoardDividerShow = (CheckBoxPreference) findPreference(DASHBOARD_DIVIDER_SHOW);
+        if (!prefs.contains(DASHBOARD_DIVIDER_SHOW)) {
+            mDashBoardDividerShow.setChecked(true);
+        }
     }
 
     @Override
