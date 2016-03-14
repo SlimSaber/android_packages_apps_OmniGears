@@ -19,7 +19,6 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Hardware keys -->
-  <string name="button_home_wake_title">Buđenje tipkom Home</string>
   <!-- Double tap to sleep -->
   <!-- Doze pulse (ambient display) options -->
   <!-- Swap volume buttons when the screen is rotated -->

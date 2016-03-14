@@ -18,6 +18,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Hardware keys -->
   <string name="button_keys_title">Hardwarová tlačítka</string>
   <string name="keys_bindings_title">Akce hardwarových tlačítek</string>
   <string name="button_keys_back_title">Tlačítko Zpět</string>
@@ -61,10 +62,19 @@
   <string name="button_home_wake_summary">Tlačítko Domů probudí zařízení</string>
   <string name="button_home_answers_call_title">Tlačítko příjmu volání</string>
   <string name="button_home_answers_call_summary">Tlačítko Domů zvedne příchozí hovor</string>
+  <string name="button_other_title">Ostatní</string>
   <string name="keys_action_app_switch_short">Výchozí</string>
   <string name="keys_action_omniswitch_short">OmniSwitch</string>
+  <string name="button_back_kill_enable_title">Vynucené ukončení aplikace tlačítkem Zpět</string>
+  <string name="button_back_kill_enable_summary">Ukončit aplikaci v popředí dlouhým podržením tlačítka zpět</string>
+  <string name="button_back_kill_timeout_title">Časový limit ukončení aplikace</string>
+  <string name="button_back_kill_timeout_500ms">500 ms</string>
+  <string name="button_back_kill_timeout_1000ms">1000 ms</string>
+  <string name="button_back_kill_timeout_1500ms">1 500 ms</string>
+  <!-- Double tap to sleep -->
   <string name="double_tap_to_sleep_title">Uspat dvojitým poklepáním</string>
   <string name="double_tap_to_sleep_summary">Dvojitým poklepáním na stavovém řádku přepnete zařízení do režimu spánku</string>
+  <!-- Doze pulse (ambient display) options -->
   <string name="doze_overwrite_value_title">Přepsat hodnotu</string>
   <string name="doze_overwrite_value_summary">Povolit přepsání výchozí hodnoty uživatelským nastavením</string>
   <string name="doze_list_mode_title">Režim Doze</string>
@@ -111,9 +121,11 @@
   <string name="pocket_only_mode">Kapsa</string>
   <string name="shake_pulse_mode">Zatřesení a blikání</string>
   <string name="pulse_only_mode">Blikání (výchozí)</string>
+  <!-- Swap volume buttons when the screen is rotated -->
   <string name="swap_volume_buttons_title">Otáčet s rotací</string>
   <string name="swap_volume_buttons_summary">Přehození tlačítek hlasitosti při otočení zařízení</string>
   <string name="color_picker_dialog_title">Barva</string>
+  <!-- Battery light settings  -->
   <string name="battery_light_enable">Povolit</string>
   <string name="battery_low_pulse_title">Blikat, pokud je baterie téměř vybitá</string>
   <string name="battery_light_list_title">Barvy</string>
@@ -128,6 +140,7 @@
   <string name="led_color_blue">Modrá</string>
   <string name="statusbar_title">Stavová lišta</string>
   <string name="battery_title">Zobrazit baterii</string>
+  <string name="statusbar_battery_summary">Nastavit styl stavové lišty baterie</string>
   <string name="battery_style_title">Vzhled</string>
   <string name="battery_percent_title">Zobrazit procenta</string>
   <string name="battery_percent_none">Nikdy</string>
@@ -138,7 +151,8 @@
   <string name="statusbar_charging_image_title">Indikátor nabíjení</string>
   <string name="statusbar_category_charging_title">Nabíjení</string>
   <string name="statusbar_charging_image_summary">Zobrazit indikátor během nabíjení. Nezobrazovat procenta</string>
-  <string name="statusbar_battery_charging_color_title">Barva baterie během nabíjení</string>
+  <string name="statusbar_battery_charging_color_title">Barva</string>
+  <string name="statusbar_battery_charging_color_enable_title">Barva při nabíjení</string>
   <string name="button_brightness_title">Jas</string>
   <string name="button_brightness_summary">Intenzita podsvětlení tlačítek</string>
   <string name="button_timeout_title">Prodleva vypnutí podsvětlení</string>
@@ -161,17 +175,22 @@
   <string name="omniswitch_dialog_unavail">OmniSwitch není nainstalována.</string>
   <string name="omniswitch_title">Styl nedávných</string>
   <string name="doze_brightness_level_title">Úroveň jasu</string>
+  <!-- Lock screen wallpaper -->
   <string name="lockscreen_wallpaper_title">Tapeta</string>
   <string name="lockscreen_wallpaper_set_title">Nastavit tapetu zámku displeje</string>
   <string name="lockscreen_wallpaper_clear_title">Vymazat tapetu zámku displeje</string>
   <string name="reset_lockscreen_wallpaper">Nastavit jako výchozí</string>
+  <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Zástupci</string>
   <string name="lockscreen_voice_shortcut_title">Zástupce hlasové asistence</string>
-  <string name="lockscreen_voice_shortcut_summary">Zobrazit hlasového asistenta místo zástupce pro vytáčení</string>
   <string name="notification_title">Panel upozornění</string>
   <string name="status_bar_custom_header_title">Vlastní obrázek záhlaví</string>
   <string name="status_bar_custom_header_summary">Povolit obrázek na pozadí panelu upozornění</string>
   <string name="daylight_header_pack_title">Balíček pozadí stavové lišty</string>
+  <string name="status_bar_custom_header_shadow_title">Stínování obrázku záhlaví</string>
+  <string name="status_bar_custom_header_shadow_summary">Pro lepší viditelnost na jasných snímcích</string>
+  <string name="unit_percent">\u0025</string>
+  <!-- Network traffic -->
   <string name="network_traffic_title">Síťový provoz</string>
   <string name="show_network_traffic_state">Stavový řádek sledování provozu</string>
   <string name="show_network_traffic_unit">Zobrazit jednotky</string>
@@ -189,8 +208,10 @@
   <string name="network_traffic_autohide_title">Automaticky skrývat</string>
   <string name="network_traffic_autohide_summary">Skrytí nástroje sledování provozu, pokud neprobíhá žádná aktivita</string>
   <string name="network_traffic_autohide_threshold">Práh nečinnosti</string>
+  <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">Ovládání jasu</string>
   <string name="status_bar_brightness_control_summary">Nastavit jas posouváním po stavovém řádku</string>
+  <!-- Status Bar Activity Indicators -->
   <string name="status_bar_network_activity_title">Ukazatel aktivity sítě</string>
   <string name="status_bar_network_activity_summary">Zobrazit síťovou aktivitu ve stavovém řádku</string>
   <string name="quick_settings_title">Rychlé nastavení</string>
@@ -205,7 +226,32 @@
   <string name="header_weather_title">Zobrazení počasí v záhlaví</string>
   <string name="header_weather_summary">Povolí zobrazení počasí v záhlaví na panelu upozornění</string>
   <string name="weather_icon_pack_title">Balík ikon počasí</string>
+  <!-- Navigationbar settings -->
   <string name="navigationbar_title">Navigační lišta</string>
+  <!-- Enable Tablet Style navigation bar -->
   <string name="enable_tablet_navigation_title">Použít rozložení na tabletu</string>
   <string name="enable_tablet_navigation_summary">Rozložení tabletu zobrazuje tlačítka Zpět a Domů na levé straně a přehled na pravé straně navigačního panelu</string>
+  <string name="other_category">Ostatní</string>
+  <!-- Dashboard columns -->
+  <string name="dashboard_columns_title">Nastavení sloupců</string>
+  <string name="dashboard_columns_phone_default">Výchozí</string>
+  <string name="dashboard_columns_two">2</string>
+  <string name="dashboard_columns_tablet_default">Výchozí</string>
+  <string name="dashboard_columns_three">3</string>
+  <string name="dashboard_columns_four">4</string>
+  <string name="dashboard_colums_resize_title">Úprava orientace</string>
+  <string name="dashboard_colums_resize_summary">Automaticky upravit nastavení sloupců založené na orientaci.</string>
+  <!-- global acions config -->
+  <string name="global_actions_power_title">Vypnout</string>
+  <string name="global_actions_reboot_title">Restartovat</string>
+  <string name="global_actions_lockdown_title">Zamknout</string>
+  <string name="global_actions_settings_title">Nastavení</string>
+  <string name="global_actions_airplane_title">Režim v letadle</string>
+  <string name="global_actions_users_title">Uživatelé</string>
+  <string name="global_actions_voiceassist_title">Hlasová asistence</string>
+  <string name="global_actions_silent_title">Tichý režim</string>
+  <string name="global_actions_dnd_title">Nerušit</string>
+  <string name="global_actions_title">Nabídka tlačítka Vypnout</string>
+  <string name="global_actions_summary">Akce v nabídce tlačítka Vypnout</string>
+  <string name="global_actions_header">Některé akce jsou viditelné v závislosti na nastavení nebo pouze v případě, že zařízení je odemčené</string>
 </resources>

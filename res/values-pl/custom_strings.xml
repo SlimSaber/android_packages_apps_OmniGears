@@ -18,6 +18,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Hardware keys -->
   <string name="button_keys_title">Przyciski</string>
   <string name="keys_bindings_title">Akcje przycisków</string>
   <string name="button_keys_back_title">Przycisk wstecz</string>
@@ -61,10 +62,19 @@
   <string name="button_home_wake_summary">Naciśnięcie przycisku Home wybudzi urządzenie</string>
   <string name="button_home_answers_call_title">Przycisk odbiera połączenie</string>
   <string name="button_home_answers_call_summary">Naciśnięcie przycisku Home odbierze połączenie</string>
+  <string name="button_other_title">Inne</string>
   <string name="keys_action_app_switch_short">Domyślne</string>
   <string name="keys_action_omniswitch_short">OmniSwitch</string>
+  <string name="button_back_kill_enable_title">Zamykanie aplikacji przyciskiem Wstecz</string>
+  <string name="button_back_kill_enable_summary">Zamknij pierwszoplanową aplikację przez przytrzymanie przycisku wstecz</string>
+  <string name="button_back_kill_timeout_title">Opóźnienie zamknięcia</string>
+  <string name="button_back_kill_timeout_500ms">500 ms</string>
+  <string name="button_back_kill_timeout_1000ms">1000 ms</string>
+  <string name="button_back_kill_timeout_1500ms">1500 ms</string>
+  <!-- Double tap to sleep -->
   <string name="double_tap_to_sleep_title">Podwójne stuknięcie wygasza ekran</string>
   <string name="double_tap_to_sleep_summary">Dwukrotnie stuknij na pasku stanu, aby uśpić urządzenie</string>
+  <!-- Doze pulse (ambient display) options -->
   <string name="doze_overwrite_value_title">Nadpisz wartość</string>
   <string name="doze_overwrite_value_summary">Zezwól na nadpisanie domyślnej wartości przez użytkownika</string>
   <string name="doze_list_mode_title">Tryb drzemki</string>
@@ -111,9 +121,11 @@
   <string name="pocket_only_mode">Tryb kieszonkowy</string>
   <string name="shake_pulse_mode">Wstrząśnięcie i pulsowanie</string>
   <string name="pulse_only_mode">Pulsowanie (domyślne)</string>
+  <!-- Swap volume buttons when the screen is rotated -->
   <string name="swap_volume_buttons_title">Dopasowanie obrotu</string>
   <string name="swap_volume_buttons_summary">Dostosuj działanie przycisków głośności do obecnej pozycji urządzenia</string>
   <string name="color_picker_dialog_title">Kolor</string>
+  <!-- Battery light settings  -->
   <string name="battery_light_enable">Włącz</string>
   <string name="battery_low_pulse_title">Pulsuj, jeśli poziom baterii jest niski</string>
   <string name="battery_light_list_title">Kolory</string>
@@ -138,7 +150,6 @@
   <string name="statusbar_charging_image_title">Wskaźnik ładowania</string>
   <string name="statusbar_category_charging_title">Ładowanie</string>
   <string name="statusbar_charging_image_summary">Wyświetlaj ikonę pioruna podczas ładowania. Ukrywa procentowy stan baterii</string>
-  <string name="statusbar_battery_charging_color_title">Kolor ikony baterii podczas ładowania</string>
   <string name="button_brightness_title">Jasność</string>
   <string name="button_brightness_summary">Jasność podświetlenia przycisków</string>
   <string name="button_timeout_title">Opóźnienie podświetlenia</string>
@@ -161,17 +172,19 @@
   <string name="omniswitch_dialog_unavail">OmniSwitch nie jest zainstalowany.</string>
   <string name="omniswitch_title">Styl ostatnio otwartych aplikacji</string>
   <string name="doze_brightness_level_title">Poziom jasności</string>
+  <!-- Lock screen wallpaper -->
   <string name="lockscreen_wallpaper_title">Tapeta</string>
   <string name="lockscreen_wallpaper_set_title">Ustaw tapetę ekranu blokady</string>
   <string name="lockscreen_wallpaper_clear_title">Wyczyść tapetę ekranu blokady</string>
   <string name="reset_lockscreen_wallpaper">Ustaw domyślną</string>
+  <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Skróty</string>
   <string name="lockscreen_voice_shortcut_title">Skrót asystenta głosowego</string>
-  <string name="lockscreen_voice_shortcut_summary">Pokaż skrót asystenta głosowego zamiast dialera</string>
   <string name="notification_title">Panel powiadomień</string>
   <string name="status_bar_custom_header_title">Niestandardowe tło panelu powiadomień</string>
   <string name="status_bar_custom_header_summary">Włącz tło panelu powiadomień</string>
   <string name="daylight_header_pack_title">Paczka teł ekranu powiadomień</string>
+  <!-- Network traffic -->
   <string name="network_traffic_title">Ruch sieciowy</string>
   <string name="show_network_traffic_state">Monitor ruch sieciowego na pasku stanu</string>
   <string name="show_network_traffic_unit">Wyświetl jednostkę</string>
@@ -189,8 +202,10 @@
   <string name="network_traffic_autohide_title">Automatyczne ukrywanie</string>
   <string name="network_traffic_autohide_summary">Ukryj monitor ruchu sieciowego, gdy nie ma aktywności</string>
   <string name="network_traffic_autohide_threshold">Próg bezczynności</string>
+  <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">Regulacja jasności</string>
   <string name="status_bar_brightness_control_summary">Dostosuj jasność ekranu przeciągając palcem po pasku stanu</string>
+  <!-- Status Bar Activity Indicators -->
   <string name="status_bar_network_activity_title">Wskaźniki aktywności</string>
   <string name="status_bar_network_activity_summary">Pokaż aktywność sieci w pasku sygnału</string>
   <string name="quick_settings_title">Szybkie ustawienia</string>
@@ -205,7 +220,18 @@
   <string name="header_weather_title">Pogoda w nagłówku</string>
   <string name="header_weather_summary">Włącz wyświetlanie pogody w nagłówku panelu powiadomień</string>
   <string name="weather_icon_pack_title">Pakiet ikon warunków zewnętrznych</string>
+  <!-- Navigationbar settings -->
   <string name="navigationbar_title">Pasek nawigacyjny</string>
+  <!-- Enable Tablet Style navigation bar -->
   <string name="enable_tablet_navigation_title">Użyj układu tabletowego</string>
   <string name="enable_tablet_navigation_summary">Układ tabletowy pokazuje przyciski wstecz i ekran główny po lewej stronie, a listę aplikacji po prawej stronie paska nawigacyjnego</string>
+  <string name="other_category">Inne</string>
+  <!-- Dashboard columns -->
+  <string name="dashboard_columns_title">Ustawienia kolumn</string>
+  <string name="dashboard_columns_phone_default">Domyślne</string>
+  <string name="dashboard_columns_two">2</string>
+  <string name="dashboard_columns_tablet_default">Domyślne</string>
+  <string name="dashboard_columns_three">3</string>
+  <string name="dashboard_columns_four">4</string>
+  <!-- global acions config -->
 </resources>

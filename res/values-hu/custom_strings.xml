@@ -18,6 +18,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Hardware keys -->
   <string name="button_keys_title">Hardveres gombok</string>
   <string name="keys_bindings_title">Gomb műveletek</string>
   <string name="button_keys_back_title">Vissza gomb</string>
@@ -61,10 +62,19 @@
   <string name="button_home_wake_summary">A kezdőlap gomb megnyomása felébreszti a készüléket</string>
   <string name="button_home_answers_call_title">Gomb fogadja a hívást</string>
   <string name="button_home_answers_call_summary">A kezdőlap gomb megnyomásával fogadja a bejövő hívást</string>
+  <string name="button_other_title">Egyéb</string>
   <string name="keys_action_app_switch_short">Alapértelmezett</string>
   <string name="keys_action_omniswitch_short">OmniSwitch</string>
+  <string name="button_back_kill_enable_title">Alkalmazás bezárás</string>
+  <string name="button_back_kill_enable_summary">Előtérben lévő alkalmazás bezárása a vissza gomb hosszú megnyomásával</string>
+  <string name="button_back_kill_timeout_title">Alkalmazás bezárás időkorlátja</string>
+  <string name="button_back_kill_timeout_500ms">500 ms</string>
+  <string name="button_back_kill_timeout_1000ms">1000 ms</string>
+  <string name="button_back_kill_timeout_1500ms">1500 ms</string>
+  <!-- Double tap to sleep -->
   <string name="double_tap_to_sleep_title">Dupla érintés alváshoz</string>
   <string name="double_tap_to_sleep_summary">Az állapotsor dupla érintése az eszközt alvó módba küldi</string>
+  <!-- Doze pulse (ambient display) options -->
   <string name="doze_overwrite_value_title">Érték felülírása</string>
   <string name="doze_overwrite_value_summary">Alapértelmezett érték felülírásának engedélyezése felhasználói beállítással</string>
   <string name="doze_list_mode_title">Szundi mód</string>
@@ -111,9 +121,11 @@
   <string name="pocket_only_mode">Zseb</string>
   <string name="shake_pulse_mode">Rázás és pulzálás</string>
   <string name="pulse_only_mode">Pulzálás (alapértelmezett)</string>
+  <!-- Swap volume buttons when the screen is rotated -->
   <string name="swap_volume_buttons_title">Forgatáshoz igazít</string>
   <string name="swap_volume_buttons_summary">Hangerőgomb műveletek hozzáigazítása az aktuális tájoláshoz</string>
   <string name="color_picker_dialog_title">Szín</string>
+  <!-- Battery light settings  -->
   <string name="battery_light_enable">Engedélyezés</string>
   <string name="battery_low_pulse_title">Villog, ha merül az akkumulátor</string>
   <string name="battery_light_list_title">Színek</string>
@@ -128,6 +140,7 @@
   <string name="led_color_blue">Kék</string>
   <string name="statusbar_title">Állapotsor</string>
   <string name="battery_title">Akkumulátor kijelzés</string>
+  <string name="statusbar_battery_summary">Állapotsor akkumulátor kijelzés stílusának beállítása</string>
   <string name="battery_style_title">Stílus</string>
   <string name="battery_percent_title">Százalék megjelenítése</string>
   <string name="battery_percent_none">Soha</string>
@@ -138,7 +151,9 @@
   <string name="statusbar_charging_image_title">Töltésjelző</string>
   <string name="statusbar_category_charging_title">Töltés</string>
   <string name="statusbar_charging_image_summary">Villám jelzés töltés közben. Elrejti a százalékot</string>
-  <string name="statusbar_battery_charging_color_title">Színes akkumulátor töltés közben</string>
+  <string name="statusbar_battery_charging_color_title">Szín</string>
+  <string name="statusbar_battery_charging_color_enable_title">Színek töltés közben</string>
+  <string name="battery_enable_title">Akkumulátor megjelenítése</string>
   <string name="button_brightness_title">Fényerő</string>
   <string name="button_brightness_summary">Gomb háttérvilágítás</string>
   <string name="button_timeout_title">Háttérvilágítás időkorlátja</string>
@@ -161,17 +176,32 @@
   <string name="omniswitch_dialog_unavail">OmniSwitch nincs telepítve.</string>
   <string name="omniswitch_title">Előzmények stílusa</string>
   <string name="doze_brightness_level_title">Fényerő szintek</string>
+  <!-- Lock screen wallpaper -->
   <string name="lockscreen_wallpaper_title">Háttérkép</string>
   <string name="lockscreen_wallpaper_set_title">Zárképernyő háttérkép beállítása</string>
   <string name="lockscreen_wallpaper_clear_title">Zárképernyő háttérkép törlése</string>
   <string name="reset_lockscreen_wallpaper">Alapértelmezettnek beállít</string>
+  <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Parancsikonok</string>
   <string name="lockscreen_voice_shortcut_title">Hangsegéd parancsikon</string>
-  <string name="lockscreen_voice_shortcut_summary">Hangsegéd parancsikon megjelenítése a telefon helyett</string>
+  <string name="lockscreen_shortcuts_enable_title">Engedélyezés</string>
+  <string name="lockscreen_clock_display_time_title">Idő mutatása</string>
+  <string name="lockscreen_clock_display_date_title">Dátum mutatása</string>
+  <string name="lockscreen_clock_display_alarm_title">Következő riasztás mutatása</string>
+  <string name="lockscreen_clock">Óra</string>
+  <string name="lockscreen_clock_font_title">Óra betűtípusa</string>
+  <string name="lockscreen_clock_color_title">Idő és dátum színe</string>
+  <string name="lockscreen_clock_size_title">Idő mérete</string>
+  <string name="lockscreen_clock_enable_title">Engedélyezés</string>
+  <string name="lockscreen_clock_shadow_title">Árnyék</string>
   <string name="notification_title">Értesítési panel</string>
   <string name="status_bar_custom_header_title">Egyéni fejléc kép</string>
   <string name="status_bar_custom_header_summary">Értesítési panel fejléc kép engedélyezése</string>
   <string name="daylight_header_pack_title">Fejléc képcsomag</string>
+  <string name="status_bar_custom_header_shadow_title">Fejléc kép árnyék</string>
+  <string name="status_bar_custom_header_shadow_summary">Jobb láthatóság világos képek esetén</string>
+  <string name="unit_percent">\u0025</string>
+  <!-- Network traffic -->
   <string name="network_traffic_title">Hálózati forgalom</string>
   <string name="show_network_traffic_state">Állapotsori hálózati forgalom</string>
   <string name="show_network_traffic_unit">Kijelzett egység</string>
@@ -189,8 +219,10 @@
   <string name="network_traffic_autohide_title">Automatikus elrejtés</string>
   <string name="network_traffic_autohide_summary">A forgalomfigyelő elrejtése inaktivitás esetén</string>
   <string name="network_traffic_autohide_threshold">Tétlenségi küszöb</string>
+  <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">Fényerő beállítása</string>
   <string name="status_bar_brightness_control_summary">Fényerő beállítása az állapotsoron való csúsztatással</string>
+  <!-- Status Bar Activity Indicators -->
   <string name="status_bar_network_activity_title">Tevékenységi mutatók</string>
   <string name="status_bar_network_activity_summary">Indikátorok megjelenítése a jelerőségekben</string>
   <string name="quick_settings_title">Gyorsbeállítások</string>
@@ -205,11 +237,33 @@
   <string name="header_weather_title">Időjárás a fejlécen</string>
   <string name="header_weather_summary">Értesítési panel fejlécén az időjárás megjelenítésének engedélyezése</string>
   <string name="weather_icon_pack_title">Állapot ikoncsomag</string>
+  <!-- Navigationbar settings -->
   <string name="navigationbar_title">Navigációs sáv</string>
+  <!-- Enable Tablet Style navigation bar -->
   <string name="enable_tablet_navigation_title">Tablet elrendezés használata</string>
   <string name="enable_tablet_navigation_summary">Tablet elrendezés a vissza és a kezdőlap gombot a bal oldalon és az áttekintést a jobb oldalon jeleníti meg a navigációs sávon</string>
   <string name="other_category">Egyéb</string>
+  <!-- Dashboard columns -->
   <string name="dashboard_columns_title">Beállítások oszlopok</string>
   <string name="dashboard_columns_phone_default">Alapértelmezett</string>
+  <string name="dashboard_columns_two">2</string>
   <string name="dashboard_columns_tablet_default">Alapértelmezett</string>
+  <string name="dashboard_columns_three">3</string>
+  <string name="dashboard_columns_four">4</string>
+  <string name="dashboard_colums_resize_title">Tájoláshoz igazítás</string>
+  <string name="dashboard_colums_resize_summary">Automatikusan a tájoláshoz igazítja a beállítások oszlopokat.</string>
+  <!-- global acions config -->
+  <string name="global_actions_power_title">Kikapcsolás</string>
+  <string name="global_actions_reboot_title">Újraindítás</string>
+  <string name="global_actions_lockdown_title">Zárolás</string>
+  <string name="global_actions_settings_title">Beállitások</string>
+  <string name="global_actions_airplane_title">Repülőgép üzemmód</string>
+  <string name="global_actions_users_title">Felhasználók</string>
+  <string name="global_actions_voiceassist_title">Hangsegéd</string>
+  <string name="global_actions_silent_title">Néma üzemmód</string>
+  <string name="global_actions_dnd_title">Ne zavarjanak</string>
+  <string name="global_actions_title">Kikapcsoló menü</string>
+  <string name="global_actions_summary">Kikapcsoló menüben látható műveletek</string>
+  <string name="global_actions_header">Egyes tevékenységek csak a beállításai függvényében láthatóak, vagy csak akkor, ha a készülék fel van oldva</string>
+  <string name="font_sample_text">11:57</string>
 </resources>

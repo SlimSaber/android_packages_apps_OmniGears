@@ -18,6 +18,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Hardware keys -->
   <string name="button_keys_title">Кнопки</string>
   <string name="keys_bindings_title">Действия кнопок</string>
   <string name="button_keys_back_title">Кнопка \"Назад\"</string>
@@ -60,6 +61,8 @@
   <string name="button_home_wake_summary">Нажатие кнопки \"Домой\" разбудит ваше устройство</string>
   <string name="button_home_answers_call_title">Кнопка отвечает на вызов</string>
   <string name="button_home_answers_call_summary">Нажатие кнопки домой ответит на входящий вызов</string>
+  <!-- Double tap to sleep -->
+  <!-- Doze pulse (ambient display) options -->
   <string name="doze_overwrite_value_title">Перезаписать значение</string>
   <string name="doze_overwrite_value_summary">Позволять заменять значение по умолчанию пользовательским</string>
   <string name="doze_list_mode_title">Режим Doze</string>
@@ -106,9 +109,11 @@
   <string name="pocket_only_mode">Карман</string>
   <string name="shake_pulse_mode">Тряска и импульсы</string>
   <string name="pulse_only_mode">Импульс (по умолчанию)</string>
+  <!-- Swap volume buttons when the screen is rotated -->
   <string name="swap_volume_buttons_title">Соответствовать повороту экрана</string>
   <string name="swap_volume_buttons_summary">Изменияь действия кнопок громкости в зависимости от текущего поворота экрана</string>
   <string name="color_picker_dialog_title">Цвет</string>
+  <!-- Battery light settings  -->
   <string name="battery_light_enable">Включить</string>
   <string name="battery_low_pulse_title">Индикация разрядки батареи</string>
   <string name="battery_light_list_title">Цвета</string>
@@ -145,4 +150,13 @@
   <string name="navbar_recents_style_title">Стиль списка запущенных приложений</string>
   <string name="omniswitch_settings">Настройки</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch не установлен.</string>
+  <!-- Lock screen wallpaper -->
+  <!-- Lock screen config -->
+  <!-- Network traffic -->
+  <!-- statusbar brightness -->
+  <!-- Status Bar Activity Indicators -->
+  <!-- Navigationbar settings -->
+  <!-- Enable Tablet Style navigation bar -->
+  <!-- Dashboard columns -->
+  <!-- global acions config -->
 </resources>

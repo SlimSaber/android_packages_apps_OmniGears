@@ -18,6 +18,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Hardware keys -->
   <string name="button_keys_title">按键</string>
   <string name="keys_bindings_title">按键行为</string>
   <string name="button_keys_back_title">返回键</string>
@@ -60,6 +61,8 @@
   <string name="button_home_wake_summary">按下主页键唤醒设备</string>
   <string name="button_home_answers_call_title">按钮接听电话</string>
   <string name="button_home_answers_call_summary">按下主页键将接听来电</string>
+  <!-- Double tap to sleep -->
+  <!-- Doze pulse (ambient display) options -->
   <string name="doze_overwrite_value_title">覆盖值</string>
   <string name="doze_overwrite_value_summary">允许使用用户的配置来覆盖默认值</string>
   <string name="doze_list_mode_title">打盹模式</string>
@@ -106,6 +109,17 @@
   <string name="pocket_only_mode">口袋</string>
   <string name="shake_pulse_mode">晃动和脉冲</string>
   <string name="pulse_only_mode">脉冲（默认值）</string>
+  <!-- Swap volume buttons when the screen is rotated -->
   <string name="swap_volume_buttons_title">匹配旋转</string>
   <string name="swap_volume_buttons_summary">根据旋转方向调整音量按键的作用</string>
+  <!-- Battery light settings  -->
+  <!-- Lock screen wallpaper -->
+  <!-- Lock screen config -->
+  <!-- Network traffic -->
+  <!-- statusbar brightness -->
+  <!-- Status Bar Activity Indicators -->
+  <!-- Navigationbar settings -->
+  <!-- Enable Tablet Style navigation bar -->
+  <!-- Dashboard columns -->
+  <!-- global acions config -->
 </resources>

@@ -18,6 +18,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Hardware keys -->
   <string name="button_keys_title">Knoppen</string>
   <string name="keys_bindings_title">Knop acties</string>
   <string name="button_keys_back_title">Terugknop</string>
@@ -63,8 +64,10 @@
   <string name="button_home_answers_call_summary">Beantwoord een inkomende oproep door op de home-knop te drukken</string>
   <string name="keys_action_app_switch_short">Standaard</string>
   <string name="keys_action_omniswitch_short">OmniSwitch</string>
+  <!-- Double tap to sleep -->
   <string name="double_tap_to_sleep_title">Dubbel tikken om te slapen</string>
   <string name="double_tap_to_sleep_summary">Dubbel tikken op de statusbar om het apparaat in slaapstand te zetten</string>
+  <!-- Doze pulse (ambient display) options -->
   <string name="doze_overwrite_value_title">Waarde overschrijven</string>
   <string name="doze_overwrite_value_summary">Toestaan om de standaard waarde te overschrijven met de instelling van de gebruiker</string>
   <string name="doze_list_mode_title">Sluimeren modus</string>
@@ -111,9 +114,11 @@
   <string name="pocket_only_mode">Zak</string>
   <string name="shake_pulse_mode">Schud en pulsstand</string>
   <string name="pulse_only_mode">Pulsstand (standaard)</string>
+  <!-- Swap volume buttons when the screen is rotated -->
   <string name="swap_volume_buttons_title">Aanpassen aan rotatie</string>
   <string name="swap_volume_buttons_summary">Actie van volumeknoppen aanpassen aan huidige rotatie</string>
   <string name="color_picker_dialog_title">Kleur</string>
+  <!-- Battery light settings  -->
   <string name="battery_light_enable">Inschakelen</string>
   <string name="battery_low_pulse_title">Knipper indien de batterij bijna leeg is</string>
   <string name="battery_light_list_title">Kleuren</string>
@@ -138,7 +143,6 @@
   <string name="statusbar_charging_image_title">Laad indicator</string>
   <string name="statusbar_category_charging_title">Opladen</string>
   <string name="statusbar_charging_image_summary">Weergeef dikgedrukte indicator gedurende het opladen. Verberg percentage</string>
-  <string name="statusbar_battery_charging_color_title">Kleur accu tijdens het opladen</string>
   <string name="button_brightness_title">Helderheid</string>
   <string name="button_brightness_summary">Helderheid achtergrondverlichting knop</string>
   <string name="button_timeout_title">Timeout achtergrondverlichting</string>
@@ -161,17 +165,19 @@
   <string name="omniswitch_dialog_unavail">OmniSwitch is niet geïnstalleerd.</string>
   <string name="omniswitch_title">Stijl van laatst gebruikte apps</string>
   <string name="doze_brightness_level_title">Helderheidsniveau</string>
+  <!-- Lock screen wallpaper -->
   <string name="lockscreen_wallpaper_title">Achtergrond</string>
   <string name="lockscreen_wallpaper_set_title">Instellen vergrendelscherm achtergrond</string>
   <string name="lockscreen_wallpaper_clear_title">Verwijderen vergrendelscherm achtergrond</string>
   <string name="reset_lockscreen_wallpaper">Zet terug naar standaard</string>
+  <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Snelkoppelingen</string>
   <string name="lockscreen_voice_shortcut_title">Snelkoppeling voor Voice assist</string>
-  <string name="lockscreen_voice_shortcut_summary">Toon de Voice assist snelkoppeling in plaats van de telefoon snelkoppeling</string>
   <string name="notification_title">Notificatie paneel</string>
   <string name="status_bar_custom_header_title">Aangepaste header afbeelding</string>
   <string name="status_bar_custom_header_summary">Schakel header afbeelding in het notificatiepaneel in</string>
   <string name="daylight_header_pack_title">Header afbeelding collectie</string>
+  <!-- Network traffic -->
   <string name="network_traffic_title">Netwerkverkeer</string>
   <string name="show_network_traffic_state">Dataverkeer weergave in statusbalk</string>
   <string name="show_network_traffic_unit">Weergave-eenheid</string>
@@ -189,8 +195,10 @@
   <string name="network_traffic_autohide_title">Automatisch verbergen</string>
   <string name="network_traffic_autohide_summary">Verberg datamonitor als er geen activiteit is</string>
   <string name="network_traffic_autohide_threshold">Inactiviteitslimiet</string>
+  <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">Helderheidsregeling</string>
   <string name="status_bar_brightness_control_summary">Helderheid aanpassen door over de statusbalk te schuiven</string>
+  <!-- Status Bar Activity Indicators -->
   <string name="status_bar_network_activity_title">Netwerk activiteiten indicator</string>
   <string name="status_bar_network_activity_summary">Toon de netwerk activiteiten indicator in de statusbalk</string>
   <string name="quick_settings_title">Snelle instellingen</string>
@@ -206,11 +214,15 @@
   <string name="header_weather_summary">Schakel de weergave van het weer in het notificatiepaneel in
 Schakel het tonen van het weer in het notificatiepaneel in</string>
   <string name="weather_icon_pack_title">Weer icon pack</string>
+  <!-- Navigationbar settings -->
   <string name="navigationbar_title">Navigatiebalk</string>
+  <!-- Enable Tablet Style navigation bar -->
   <string name="enable_tablet_navigation_title">Gebruik tablet lay-out</string>
   <string name="enable_tablet_navigation_summary">Tablet lay-out toont de terug en home knop op de linker- en de overzicht knop aan de rechterkant van de navigatiebalk</string>
   <string name="other_category">Overige</string>
+  <!-- Dashboard columns -->
   <string name="dashboard_columns_title">Kolom instellingen</string>
   <string name="dashboard_columns_phone_default">Standaard</string>
   <string name="dashboard_columns_tablet_default">Standaard</string>
+  <!-- global acions config -->
 </resources>

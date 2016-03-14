@@ -18,6 +18,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Hardware keys -->
   <string name="button_keys_title">Tasten</string>
   <string name="keys_bindings_title">Tastenaktionen</string>
   <string name="button_keys_back_title">Zurück-Taste</string>
@@ -61,10 +62,19 @@
   <string name="button_home_wake_summary">Drücken der Home-Taste weckt Ihr Gerät</string>
   <string name="button_home_answers_call_title">Rufannahme mit Home-Taste</string>
   <string name="button_home_answers_call_summary">Drücken der Home-Taste nimmt eingehenden Anruf an</string>
+  <string name="button_other_title">Andere</string>
   <string name="keys_action_app_switch_short">Standard</string>
   <string name="keys_action_omniswitch_short">OmniSwitch</string>
+  <string name="button_back_kill_enable_title">App beenden Zurück-Taste</string>
+  <string name="button_back_kill_enable_summary">Beenden der laufenden Anwendung durch langes Drücken der \"Zurück\"-Taste erzwingen</string>
+  <string name="button_back_kill_timeout_title">App beenden Zeitbeschränkung</string>
+  <string name="button_back_kill_timeout_500ms">500 ms</string>
+  <string name="button_back_kill_timeout_1000ms">1000 ms</string>
+  <string name="button_back_kill_timeout_1500ms">1500 ms</string>
+  <!-- Double tap to sleep -->
   <string name="double_tap_to_sleep_title">Doppelt Tippen für Schlafmodus</string>
   <string name="double_tap_to_sleep_summary">Tippe die Statusleiste zweimal an, um das Gerät in den Ruhemodus zu versetzen</string>
+  <!-- Doze pulse (ambient display) options -->
   <string name="doze_overwrite_value_title">Überschreibewert</string>
   <string name="doze_overwrite_value_summary">Überschreiben des Standard-Wertes durch Benutzer Konfiguration erlauben</string>
   <string name="doze_list_mode_title">Schlummern-Modus</string>
@@ -111,9 +121,11 @@
   <string name="pocket_only_mode">Tasche</string>
   <string name="shake_pulse_mode">Schütteln und Pulsieren</string>
   <string name="pulse_only_mode">Pulsieren (Standard)</string>
+  <!-- Swap volume buttons when the screen is rotated -->
   <string name="swap_volume_buttons_title">Passend zur Bildschirmausrichtung</string>
   <string name="swap_volume_buttons_summary">Anpassen der Lautstärkentastenaktion an aktuelle Bildschirmausrichtung</string>
   <string name="color_picker_dialog_title">Farbe</string>
+  <!-- Battery light settings  -->
   <string name="battery_light_enable">Aktivieren</string>
   <string name="battery_low_pulse_title">Bei schwachem Akku blinken</string>
   <string name="battery_light_list_title">Farben</string>
@@ -128,6 +140,7 @@
   <string name="led_color_blue">Blau</string>
   <string name="statusbar_title">Statusleiste</string>
   <string name="battery_title">Batterie-Anzeige</string>
+  <string name="statusbar_battery_summary">Darstellung der Batterieanzeige festlegen</string>
   <string name="battery_style_title">Aussehen</string>
   <string name="battery_percent_title">Prozent anzeigen</string>
   <string name="battery_percent_none">Niemals</string>
@@ -138,7 +151,9 @@
   <string name="statusbar_charging_image_title">Ladeanzeige</string>
   <string name="statusbar_category_charging_title">Akku wird geladen</string>
   <string name="statusbar_charging_image_summary">Blitz Indikator beim Laden anzeigen. Versteckt die Prozent Anzeige</string>
-  <string name="statusbar_battery_charging_color_title">Batterieanzeige beim Laden einfärben</string>
+  <string name="statusbar_battery_charging_color_title">Farbe</string>
+  <string name="statusbar_battery_charging_color_enable_title">Farbe während des Ladevorgangs</string>
+  <string name="battery_enable_title">Akku anzeigen</string>
   <string name="button_brightness_title">Helligkeit</string>
   <string name="button_brightness_summary">Helligkeit Tastenhintergrundbeleuchtung</string>
   <string name="button_timeout_title">Hintergrundbeleuchtungszeit</string>
@@ -161,17 +176,32 @@
   <string name="omniswitch_dialog_unavail">OmniSwitch ist nicht installiert.</string>
   <string name="omniswitch_title">Darstellung zuletzt verwendeter Apps</string>
   <string name="doze_brightness_level_title">Helligkeitsstufe</string>
+  <!-- Lock screen wallpaper -->
   <string name="lockscreen_wallpaper_title">Hintergrundbild</string>
   <string name="lockscreen_wallpaper_set_title">Hintergrundbild für Sperrbildschirm einstellen</string>
   <string name="lockscreen_wallpaper_clear_title">Hintergrundbild für Sperrbildschirm löschen</string>
   <string name="reset_lockscreen_wallpaper">Auf Standardeinstellung setzen</string>
+  <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Verknüpfungen</string>
   <string name="lockscreen_voice_shortcut_title">Spracheingabe-Verknüpfung</string>
-  <string name="lockscreen_voice_shortcut_summary">Zeige Spracheingabe- statt Wählhilfe-Verknüpfung</string>
+  <string name="lockscreen_shortcuts_enable_title">Einschalten</string>
+  <string name="lockscreen_clock_display_time_title">Uhrzeit anzeigen</string>
+  <string name="lockscreen_clock_display_date_title">Datum anzeigen</string>
+  <string name="lockscreen_clock_display_alarm_title">Nächsten Alarm anzeigen</string>
+  <string name="lockscreen_clock">Uhr</string>
+  <string name="lockscreen_clock_font_title">Schriftart für Uhrzeit</string>
+  <string name="lockscreen_clock_color_title">Uhrzeit und Datum Farbe</string>
+  <string name="lockscreen_clock_size_title">Größe der Uhrzeit</string>
+  <string name="lockscreen_clock_enable_title">Einschalten</string>
+  <string name="lockscreen_clock_shadow_title">Schatten</string>
   <string name="notification_title">Benachrichtigungsfeld</string>
   <string name="status_bar_custom_header_title">Benutzerdefiniertes Kopfzeilenbild</string>
   <string name="status_bar_custom_header_summary">Benutzerdefiniertes Kopfzeilenbild im Benachrichtigungsfeld aktivieren</string>
   <string name="daylight_header_pack_title">Kopfzeilen Bild-Sammlung</string>
+  <string name="status_bar_custom_header_shadow_title">Kopfzeilenbild-Schatten</string>
+  <string name="status_bar_custom_header_shadow_summary">Bessere Sichtbarkeit bei hellen Bildern</string>
+  <string name="unit_percent">\u0025</string>
+  <!-- Network traffic -->
   <string name="network_traffic_title">Netzwerkverkehr</string>
   <string name="show_network_traffic_state">Statusleisten Netzwerkverkehrsanzeige</string>
   <string name="show_network_traffic_unit">Angezeigte Einheit</string>
@@ -189,8 +219,10 @@
   <string name="network_traffic_autohide_title">Automatisch verstecken</string>
   <string name="network_traffic_autohide_summary">Verstecke Netzwerkverkehr-Monitor bei fehlender Aktivität</string>
   <string name="network_traffic_autohide_threshold">Inaktivitätsschwelle</string>
+  <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">Helligkeitskontrolle</string>
   <string name="status_bar_brightness_control_summary">Helligkeit durch Wischen über die Statusleiste einstellen</string>
+  <!-- Status Bar Activity Indicators -->
   <string name="status_bar_network_activity_title">Aktivitätsindikatoren</string>
   <string name="status_bar_network_activity_summary">Indikatoren in Signal-Balken anzeigen</string>
   <string name="quick_settings_title">Schnelleinstellungen</string>
@@ -205,11 +237,33 @@
   <string name="header_weather_title">Wetteranzeige in Kopfzeile</string>
   <string name="header_weather_summary">Wetteranzeige in Benachrichtigungsfeld-Kopfzeile aktivieren</string>
   <string name="weather_icon_pack_title">Wetter Symbol-Paket</string>
+  <!-- Navigationbar settings -->
   <string name="navigationbar_title">Navigationsleiste</string>
+  <!-- Enable Tablet Style navigation bar -->
   <string name="enable_tablet_navigation_title">Tablet-Ansicht verwenden</string>
   <string name="enable_tablet_navigation_summary">Die Tablet-Ansicht zeigt die \"Zurück\"- und \"Home\"-Taste auf der linken Seite an, die Übersicht auf der rechten Seite der Navigationsleiste.</string>
   <string name="other_category">Sonstige</string>
+  <!-- Dashboard columns -->
   <string name="dashboard_columns_title">Einstellungen-Spalten</string>
   <string name="dashboard_columns_phone_default">Standard</string>
+  <string name="dashboard_columns_two">2</string>
   <string name="dashboard_columns_tablet_default">Standard</string>
+  <string name="dashboard_columns_three">3</string>
+  <string name="dashboard_columns_four">4</string>
+  <string name="dashboard_colums_resize_title">Ausrichtung anpassen</string>
+  <string name="dashboard_colums_resize_summary">Schnelleinstellungen automatisch an die Ausrichtung anpassen.</string>
+  <!-- global acions config -->
+  <string name="global_actions_power_title">Ein/Aus</string>
+  <string name="global_actions_reboot_title">Neustart</string>
+  <string name="global_actions_lockdown_title">Sperren</string>
+  <string name="global_actions_settings_title">Einstellungen</string>
+  <string name="global_actions_airplane_title">Flugmodus</string>
+  <string name="global_actions_users_title">Nutzer</string>
+  <string name="global_actions_voiceassist_title">Sprachassistent</string>
+  <string name="global_actions_silent_title">Lautlos</string>
+  <string name="global_actions_dnd_title">Nicht stören</string>
+  <string name="global_actions_title">Ein/Aus-Menü</string>
+  <string name="global_actions_summary">Im Ein/Aus-Menü angezeigte Aktionen</string>
+  <string name="global_actions_header">Einige Aktionen sind nur abhängig von den Einstellungen oder wenn das Gerät entsperrt ist sichtbar</string>
+  <string name="font_sample_text">11:57</string>
 </resources>

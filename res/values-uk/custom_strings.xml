@@ -18,6 +18,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Hardware keys -->
   <string name="button_keys_title">Кнопки</string>
   <string name="keys_bindings_title">Дії кнопок</string>
   <string name="button_keys_back_title">Кнопка \"Назад\"</string>
@@ -60,6 +61,8 @@
   <string name="button_home_wake_summary">Натиснення кнопки \"Додому\" розбудить ваш пристрій</string>
   <string name="button_home_answers_call_title">Кнопка відповіді на дзвінок</string>
   <string name="button_home_answers_call_summary">Натискання кнопки \"Додому\" приймає вхідний дзвінок</string>
+  <!-- Double tap to sleep -->
+  <!-- Doze pulse (ambient display) options -->
   <string name="doze_overwrite_value_title">Перезаписати значення</string>
   <string name="doze_overwrite_value_summary">Дозволяє перезаписувати значення за замовчуванням з конфігурації користувачів</string>
   <string name="doze_list_mode_title">Режим Doze</string>
@@ -106,9 +109,11 @@
   <string name="pocket_only_mode">Кишеня</string>
   <string name="shake_pulse_mode">Струс та імпульс</string>
   <string name="pulse_only_mode">Імпульс (за замовч.)</string>
+  <!-- Swap volume buttons when the screen is rotated -->
   <string name="swap_volume_buttons_title">Відрегулювати обертання</string>
   <string name="swap_volume_buttons_summary">Відрегулювати дії кнопок гучності в залежності від поточного положення</string>
   <string name="color_picker_dialog_title">Колір</string>
+  <!-- Battery light settings  -->
   <string name="battery_light_enable">Увімкнути</string>
   <string name="battery_low_pulse_title">Індикація розрядки батареї</string>
   <string name="battery_light_list_title">Кольори</string>
@@ -133,7 +138,6 @@
   <string name="statusbar_charging_image_title">Індикатор зарядки</string>
   <string name="statusbar_category_charging_title">Зарядка</string>
   <string name="statusbar_charging_image_summary">Показати значок блискавки під час зарядки. Приховує відсотки над акумулятором</string>
-  <string name="statusbar_battery_charging_color_title">Колір батареї під час зарядки</string>
   <string name="button_brightness_title">Яскравість</string>
   <string name="button_brightness_summary">Яскравість підсвічування кнопок</string>
   <string name="button_timeout_title">Тайм-аут підсвічування</string>
@@ -154,13 +158,16 @@
   <string name="omniswitch_settings">Налаштування</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch не встановлено.</string>
   <string name="doze_brightness_level_title">Рівень яскравості</string>
+  <!-- Lock screen wallpaper -->
   <string name="lockscreen_wallpaper_title">Шпалери</string>
   <string name="lockscreen_wallpaper_set_title">Встановити шпалери для екрану блокування</string>
   <string name="lockscreen_wallpaper_clear_title">Видалити шпалери з екрану блокування</string>
   <string name="reset_lockscreen_wallpaper">Встановити за промовчанням</string>
+  <!-- Lock screen config -->
   <string name="notification_title">Панель сповіщень</string>
   <string name="status_bar_custom_header_title">Користувацький заголовок зображення</string>
   <string name="status_bar_custom_header_summary">Увімкнути заголовок зображення панелі сповіщень</string>
+  <!-- Network traffic -->
   <string name="network_traffic_title">Мережевий трафік</string>
   <string name="show_network_traffic_state">Відображати трафік у статус барі</string>
   <string name="show_network_traffic_unit">Показати одиниці</string>
@@ -178,8 +185,14 @@
   <string name="network_traffic_autohide_title">Автоматично-приховувати</string>
   <string name="network_traffic_autohide_summary">Приховати монітор трафіку, якщо він неактивний</string>
   <string name="network_traffic_autohide_threshold">Поріг неактивності</string>
+  <!-- statusbar brightness -->
   <string name="status_bar_brightness_control_title">Контроль яскравості</string>
   <string name="status_bar_brightness_control_summary">Регулюйте яскравість проводячи по статус бару</string>
+  <!-- Status Bar Activity Indicators -->
   <string name="status_bar_network_activity_title">Індикатори активності</string>
   <string name="status_bar_network_activity_summary">Відобразити індикатори в статус барі</string>
+  <!-- Navigationbar settings -->
+  <!-- Enable Tablet Style navigation bar -->
+  <!-- Dashboard columns -->
+  <!-- global acions config -->
 </resources>
