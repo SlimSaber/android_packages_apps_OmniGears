@@ -83,7 +83,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private static final String BUTTON_HOME_WAKE = "button_home_wake_screen";
     private static final String BUTTON_HOME_ANSWERS_CALL = "button_home_answers_call";
 //    private static final String BUTTON_VOLUME_DEFAULT = "button_volume_default_screen";
-//    private static final String BUTTON_VOLUME_MUSIC_CONTROL = "button_volume_music_control";
 //    private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
     private static final String SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
 //    private static final String CATEGORY_HEADSETHOOK = "button_headsethook";
@@ -135,7 +134,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private CheckBoxPreference mVolumeWake;
     private CheckBoxPreference mHomeWake;
     private CheckBoxPreference mHomeAnswerCall;
-//    private CheckBoxPreference mVolumeMusicControl;
     private CheckBoxPreference mSwapVolumeButtons;
 //    private ListPreference mVolumeKeyCursorControl;
     private SwitchPreference mEnableCustomBindings;
@@ -207,11 +205,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 //
 //          mVolumeDefault.setValue(Integer.toString(currentDefault));
 //          mVolumeDefault.setOnPreferenceChangeListener(this);
-//
-//          mVolumeMusicControl = (CheckBoxPreference) findPreference(BUTTON_VOLUME_MUSIC_CONTROL);
-//          mVolumeMusicControl.setChecked(Settings.System.getInt(resolver,
-//                  Settings.System.VOLUME_MUSIC_CONTROL, 0) != 0);
-//
+
             mSwapVolumeButtons = (CheckBoxPreference) findPreference(SWAP_VOLUME_BUTTONS);
             mSwapVolumeButtons.setChecked(Settings.System.getInt(resolver,
                    Settings.System.SWAP_VOLUME_BUTTONS, 0) != 0);
@@ -524,11 +518,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 //            boolean checked = ((CheckBoxPreference)preference).isChecked();
 //            Settings.System.putInt(getContentResolver(),
 //                    Settings.System.VIRTUAL_KEYS_HAPTIC_FEEDBACK, checked ? 1:0);
-//            return true;
-//        } else if (preference == mVolumeMusicControl) {
-//            boolean checked = ((CheckBoxPreference)preference).isChecked();
-//            Settings.System.putInt(getActivity().getContentResolver(),
-//                    Settings.System.VOLUME_MUSIC_CONTROL, checked ? 1:0);
 //            return true;
 //        } else if (preference == mForceShowOverflowMenu) {
 //            boolean checked = ((CheckBoxPreference)preference).isChecked();

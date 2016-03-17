@@ -39,7 +39,8 @@
             android:key="button_volume_wake_screen"
             android:title="@string/button_volume_wake_title"
             android:summary="@string/button_volume_wake_summary"
-            android:persistent="false"/>
+            android:persistent="false"
+            android:disableDependentsState="true" />
 
         <!--<ListPreference
             android:key="button_volume_default_screen"
@@ -47,15 +48,15 @@
             android:summary="@string/button_volume_default_summary"
             android:entries="@array/button_volume_default_entries"
             android:entryValues="@array/button_volume_default_values"
-            android:persistent="false"/>
+            android:persistent="false"/>-->
 
-        <CheckBoxPreference
-            android:key="button_volume_music_control"
-            android:title="@string/button_volume_music_control_title"
-            android:summary="@string/button_volume_music_control_summary"
-            android:persistent="false"/>
+        <com.android.settings.preference.SystemCheckBoxPreference
+            android:key="volume_button_music_control"
+            android:title="@string/volume_button_music_control_title"
+            android:summary="@string/volume_button_music_control_summary"
+            android:dependency="button_volume_wake_screen"/>
 
-        <ListPreference
+        <!-- <ListPreference
             android:key="volume_key_cursor_control"
             android:persistent="false"
             android:dialogTitle="@string/volume_key_cursor_control_title"
