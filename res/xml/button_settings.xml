@@ -102,8 +102,7 @@
 
         <PreferenceScreen
             android:key="button_brightness"
-            android:title="@string/button_brightness_title"
-            android:summary="@string/button_brightness_summary"
+            android:title="@string/button_backlight_title"
             android:fragment="org.omnirom.omnigears.brightness.ButtonBrightnessSettings" />
 
         <!--<SwitchPreference

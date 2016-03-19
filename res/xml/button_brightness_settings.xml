@@ -19,22 +19,24 @@
         android:title="@string/button_brightness_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-        <com.android.settings.preference.SeekBarPreference
-                android:key="button_manual_brightness_new"
-                android:title="@string/button_manual_brightness"
-                android:max="255"
-                settings:min="0"
-                android:persistent="false" />
-        <CheckBoxPreference
-                android:key="button_no_brightness"
-                android:title="@string/button_no_brightness"
-                android:summary="@string/button_no_brightness_summary"
+        <SwitchPreference
+                android:key="button_backlight_enable"
+                android:title="@string/button_backlight_enable_title"
                 android:persistent="false"/>
         <CheckBoxPreference
                 android:key="button_link_brightness"
                 android:title="@string/button_link_brightness"
                 android:summary="@string/button_link_brightness_summary"
-                android:persistent="false"/>
+                android:persistent="false"
+                android:dependency="button_backlight_enable"
+                android:disableDependentsState="true" />
+        <com.android.settings.preference.SeekBarPreference
+                android:key="button_manual_brightness_new"
+                android:title="@string/button_manual_brightness"
+                android:max="255"
+                settings:min="0"
+                android:persistent="false"
+                android:dependency="button_link_brightness" />
         <com.android.settings.preference.SeekBarPreference
                 android:key="button_timeout"
                 android:title="@string/button_timeout_title"
@@ -43,5 +45,6 @@
                 settings:min="0"
                 settings:unitsLeft=""
                 settings:unitsRight="@string/unit_sec"
-                android:persistent="false" />
+                android:persistent="false"
+                android:dependency="button_backlight_enable" />
 </PreferenceScreen>

@@ -34,6 +34,7 @@ import android.preference.PreferenceScreen;
 import android.preference.ListPreference;
 import android.preference.CheckBoxPreference;
 import android.preference.PreferenceCategory;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.provider.SearchIndexableResource;
 import android.view.View;
@@ -61,12 +62,12 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
         Preference.OnPreferenceChangeListener, Indexable {
     private static final String TAG = "ButtonBrightnessSettings";
 
-    private static final String KEY_BUTTON_NO_BRIGHTNESS = "button_no_brightness";
+    private static final String KEY_BUTTON_BACKLIGHT_ENABLE = "button_backlight_enable";
     private static final String KEY_BUTTON_LINK_BRIGHTNESS = "button_link_brightness";
     private static final String KEY_BUTTON_MANUAL_BRIGHTNESS_NEW = "button_manual_brightness_new";
     private static final String KEY_BUTTON_TIMEOUT = "button_timeout";
 
-    private CheckBoxPreference mNoButtonBrightness;
+    private SwitchPreference mButtonBacklightEnable;
     private CheckBoxPreference mLinkButtonBrightness;
     private IPowerManager mPowerService;
     private SeekBarPreference mButtonTimoutBar;
@@ -84,9 +85,9 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getContentResolver();
 
-        mNoButtonBrightness = (CheckBoxPreference) findPreference(KEY_BUTTON_NO_BRIGHTNESS);
-        mNoButtonBrightness.setChecked(Settings.System.getInt(resolver,
-                Settings.System.CUSTOM_BUTTON_DISABLE_BRIGHTNESS, 0) != 0);
+        mButtonBacklightEnable = (SwitchPreference) findPreference(KEY_BUTTON_BACKLIGHT_ENABLE);
+        mButtonBacklightEnable.setChecked(Settings.System.getInt(resolver,
+                Settings.System.CUSTOM_BUTTON_DISABLE_BRIGHTNESS, 0) == 0);
 
         mLinkButtonBrightness = (CheckBoxPreference) findPreference(KEY_BUTTON_LINK_BRIGHTNESS);
         mLinkButtonBrightness.setChecked(Settings.System.getInt(resolver,
@@ -97,6 +98,8 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
                 com.android.internal.R.integer.config_button_brightness_default);
         final int currentBrightness = Settings.System.getInt(resolver,
                 Settings.System.CUSTOM_BUTTON_BRIGHTNESS, customButtonBrightness);
+        PowerManager pm = (PowerManager)getActivity().getSystemService(Context.POWER_SERVICE);
+        mManualButtonBrightnessNew.setMaxValue(pm.getMaximumScreenBrightnessSetting());
         mManualButtonBrightnessNew.setValue(currentBrightness);
         mManualButtonBrightnessNew.setOnPreferenceChangeListener(this);
 
@@ -107,39 +110,19 @@ public class ButtonBrightnessSettings extends SettingsPreferenceFragment impleme
         mButtonTimoutBar.setOnPreferenceChangeListener(this);
 
         mPowerService = IPowerManager.Stub.asInterface(ServiceManager.getService("power"));
-
-        updateEnablement();
-    }
-
-    private void updateEnablement() {
-        if (mNoButtonBrightness.isChecked()){
-            mLinkButtonBrightness.setEnabled(false);
-            mButtonTimoutBar.setEnabled(false);
-            mManualButtonBrightnessNew.setEnabled(false);
-        } else if (mLinkButtonBrightness.isChecked()){
-            mNoButtonBrightness.setEnabled(false);
-            mManualButtonBrightnessNew.setEnabled(false);
-        } else {
-            mNoButtonBrightness.setEnabled(true);
-            mLinkButtonBrightness.setEnabled(true);
-            mButtonTimoutBar.setEnabled(true);
-            mManualButtonBrightnessNew.setEnabled(true);
-        }
     }
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mNoButtonBrightness) {
-            boolean checked = ((CheckBoxPreference)preference).isChecked();
+        if (preference == mButtonBacklightEnable) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getContentResolver(),
-                    Settings.System.CUSTOM_BUTTON_DISABLE_BRIGHTNESS, checked ? 1:0);
-            updateEnablement();
+                    Settings.System.CUSTOM_BUTTON_DISABLE_BRIGHTNESS, checked ? 0 : 1);
             return true;
         } else if (preference == mLinkButtonBrightness) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putInt(getContentResolver(),
-                    Settings.System.CUSTOM_BUTTON_USE_SCREEN_BRIGHTNESS, checked ? 1:0);
-            updateEnablement();
+                    Settings.System.CUSTOM_BUTTON_USE_SCREEN_BRIGHTNESS, checked ? 1 : 0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);

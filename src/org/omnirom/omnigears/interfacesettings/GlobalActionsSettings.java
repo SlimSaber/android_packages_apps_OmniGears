@@ -69,6 +69,7 @@ public class GlobalActionsSettings extends SettingsPreferenceFragment implements
 
         final String[] allActions = getContext().getResources().getStringArray(
                 com.android.internal.R.array.values_globalActionsList);
+        final List<String> allActionssList = new ArrayList<String>(Arrays.asList(allActions));
 
         final String enabledActions = Settings.System.getString(contentResolver,
                 Settings.System.GLOBAL_ACTIONS_LIST);
@@ -88,21 +89,22 @@ public class GlobalActionsSettings extends SettingsPreferenceFragment implements
         }
         final UserManager um = (UserManager) getContext().getSystemService(Context.USER_SERVICE);
         boolean multiUser = um.isUserSwitcherEnabled();
-        Preference userPref = null;
         int count = prefScreen.getPreferenceCount();
         for (int i = 0; i < count; i++) {
             Preference p = prefScreen.getPreference(i);
             if (p instanceof SwitchPreference) {
                 SwitchPreference action = (SwitchPreference) p;
                 String key = action.getKey();
+                if (!allActionssList.contains(key)) {
+                    prefScreen.removePreference(action);
+                    continue;
+                }
                 if (key.equals("users") && !multiUser) {
-                    userPref = action;
+                    prefScreen.removePreference(action);
+                    continue;
                 }
                 action.setChecked(mGlobalActionsMap.get(key));
             }
-        }
-        if (userPref != null) {
-            prefScreen.removePreference(userPref);
         }
     }
 

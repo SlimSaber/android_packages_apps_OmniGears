@@ -54,9 +54,11 @@
                     android:defaultValue="true"
                     android:dependency="doze_overwrite_value" />
 
-            <Preference
+            <com.android.settings.preference.SeekBarPreference
                     android:key="doze_brightness_level"
                     android:title="@string/doze_brightness_level_title"
+                    android:max="255"
+                    settings:min="0"
                     android:persistent="false"
                     android:dependency="doze_overwrite_value" />
 
