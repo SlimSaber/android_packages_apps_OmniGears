@@ -807,7 +807,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private void doOmniSwitchConfig() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
         alertDialogBuilder.setTitle(R.string.omniswitch_title);
-        alertDialogBuilder.setMessage(R.string.omniswitch_dialog_running)
+        alertDialogBuilder.setMessage(R.string.omniswitch_dialog_running_new)
             .setPositiveButton(R.string.omniswitch_settings, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog,int id) {
                     startActivity(OmniSwitchConstants.INTENT_LAUNCH_APP);
