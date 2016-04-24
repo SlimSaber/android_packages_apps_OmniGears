@@ -56,6 +56,8 @@
   <string name="button_volume_keys_title">Hlasitosť</string>
   <string name="button_volume_wake_title">Prebudiť tlačidlom</string>
   <string name="button_volume_wake_summary">Stlačenie tlačidla hlasitosti prebudí zariadenie</string>
+  <string name="volume_button_music_control_title">Ovládanie hudby</string>
+  <string name="volume_button_music_control_summary">Dlhým podržaním tlačidiel hlasitosti prepínať skladby pri vypnutej obrazovke</string>
   <string name="keys_action_sleep">Uspať</string>
   <string name="keys_action_omniswitch">Nedávne OmniSwitch</string>
   <string name="button_home_wake_title">Prebudiť tlačidlom</string>
@@ -154,17 +156,14 @@
   <string name="statusbar_battery_charging_color_title">Farba</string>
   <string name="statusbar_battery_charging_color_enable_title">Pri nabíjaní zmeniť farbu</string>
   <string name="battery_enable_title">Zobraziť batériu</string>
-  <string name="button_brightness_title">Jas</string>
-  <string name="button_brightness_summary">Intenzita podsvietenia tlačidiel</string>
+  <string name="button_backlight_title">Podsvietenie tlačidiel</string>
   <string name="button_timeout_title">Oneskorenie vypnutia podsvietenia</string>
   <string name="button_timeout_summary">Na hodnote 0 zakázané</string>
-  <string name="button_no_brightness">Tmavý režim</string>
-  <string name="button_no_brightness_summary">Nenastavovať podsvietenie tlaćitok</string>
   <string name="button_link_brightness">Odkaz na displej</string>
   <string name="button_link_brightness_summary">Použiť úroveň jasu obrazovky</string>
   <string name="button_manual_brightness">Úroveň jasu</string>
-  <string name="dialog_manual_brightness_title">Úroveň jasu</string>
   <string name="unit_sec">sek</string>
+  <string name="button_backlight_enable_title">Povoliť</string>
   <string name="navigation_bar_show_title">Zobraziť navigačnú lištu</string>
   <string name="navigation_bar_show_summary">Rýchle zapnutie navigačneho panela</string>
   <string name="hardware_keys_disable_title">Zakázať tlačidlá</string>
@@ -172,7 +171,7 @@
   <string name="navbar_title">Navigačná lišta</string>
   <string name="navbar_recents_style_title">Nedávne štýly</string>
   <string name="omniswitch_settings">Nastavenia</string>
-  <string name="omniswitch_dialog_running">OmniSwitch je v súčasnosti zakázaný. Povoľte ho a zapnite voľbu \u2019Spustiť pri štarte\u2019 v nastavení.</string>
+  <string name="omniswitch_dialog_running_new">OmniSwitch je vypnutý. Zapnite ho prosím v nastaveniach programu.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch nie je nainštalováný.</string>
   <string name="omniswitch_title">Nedávne štýly</string>
   <string name="doze_brightness_level_title">Úroveň jasu</string>
@@ -184,6 +183,7 @@
   <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Odkazy</string>
   <string name="lockscreen_voice_shortcut_title">Odkaz na hlasovú asistenciu</string>
+  <string name="lockscreen_voice_shortcut_summary">Zobraziť hlasového asistenta namiesto odkazu na vytáčanie</string>
   <string name="lockscreen_shortcuts_enable_title">Zapnúť</string>
   <string name="lockscreen_clock_display_time_title">Zobraziť čas</string>
   <string name="lockscreen_clock_display_date_title">Zobraziť dátum</string>
@@ -194,6 +194,17 @@
   <string name="lockscreen_clock_size_title">Veľkosť času</string>
   <string name="lockscreen_clock_enable_title">Zapnúť</string>
   <string name="lockscreen_clock_shadow_title">Obrys</string>
+  <string name="lockscreen_shortcuts_title">Vlastné skratky aplikácií</string>
+  <string name="lockscreen_shortcuts_summary">Aplikácie zobrazované na uzamknutej obrazovke pre rýchly prístup. Podržaním skryť.</string>
+  <string name="lockscreen_shortcut_add_dialog_title">Pridať odkaz</string>
+  <string name="lockscreen_shortcut_apps_title">Odkazy</string>
+  <string name="lockscreen_shortcut_add">Pridať\u2026</string>
+  <string name="lockscreen_indicator_display_title">Zobraziť text pod odkazom</string>
+  <string name="lockscreen_indicator_display_summary">Poznámka: vlastné odkazy skryjú text</string>
+  <string name="lockscreen_camera_shortcut_enable_title">Zobrazovať odkaz fotoaparátu</string>
+  <string name="lockscreen_camera_shortcut_enable_summary">Viditeľnosť závisí od nastavenia systému</string>
+  <string name="lockscreen_left_shortcut_enable_title">Zobrazovať odkaz vytáčania alebo hlasového asistenta</string>
+  <string name="lockscreen_left_shortcut_enable_summary">Viditeľnosť závisí od nastavenia systému</string>
   <string name="notification_title">Panel upozornení</string>
   <string name="status_bar_custom_header_title">Vlastný obrázok záhlavia</string>
   <string name="status_bar_custom_header_summary">Povoliť obrázok na pozadí notifikačného panela</string>
@@ -252,12 +263,16 @@
   <string name="dashboard_columns_four">4</string>
   <string name="dashboard_colums_resize_title">Úprava orientácie</string>
   <string name="dashboard_colums_resize_summary">Automaticky upraviť stĺpce nastavení na základe orientácie.</string>
+  <string name="dashboard_divider_show_title">Zobraziť oddeľovač stĺpcov</string>
   <!-- global acions config -->
   <string name="global_actions_power_title">Napájanie</string>
   <string name="global_actions_reboot_title">Reštart</string>
   <string name="global_actions_lockdown_title">Uzamknúť</string>
   <string name="global_actions_settings_title">Možnosti</string>
   <string name="global_actions_airplane_title">Režim v lietadle</string>
+  <string name="global_actions_screenshot_title">Snímka obrazovky</string>
+  <string name="global_actions_screenrecord_title">Záznam obrazovky</string>
+  <string name="global_actions_torch_title">Baterka</string>
   <string name="global_actions_users_title">Používatelia</string>
   <string name="global_actions_voiceassist_title">Hlasový asistent</string>
   <string name="global_actions_silent_title">Tichý režim</string>

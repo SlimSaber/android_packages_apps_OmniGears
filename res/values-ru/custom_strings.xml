@@ -131,16 +131,11 @@
   <string name="battery_percent_none">Никогда</string>
   <string name="battery_percent_always">Всегда</string>
   <string name="battery_percent_expanded">Широкий</string>
-  <string name="button_brightness_title">Яркость</string>
-  <string name="button_brightness_summary">Яркость подсветки кнопок</string>
   <string name="button_timeout_title">Время работы подсветки</string>
   <string name="button_timeout_summary">Отклычено при значении \"0\"</string>
-  <string name="button_no_brightness">Темный режим</string>
-  <string name="button_no_brightness_summary">Не изменять яркость кнопок</string>
   <string name="button_link_brightness">В соответствии с экраном</string>
   <string name="button_link_brightness_summary">Использовать яркость экрана</string>
   <string name="button_manual_brightness">Уровень яркости</string>
-  <string name="dialog_manual_brightness_title">Яркость</string>
   <string name="unit_sec">сек.</string>
   <string name="navigation_bar_show_title">Показывать панель навигации</string>
   <string name="navigation_bar_show_summary">Принудительно включить панель навигации</string>

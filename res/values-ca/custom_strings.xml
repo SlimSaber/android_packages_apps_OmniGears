@@ -56,6 +56,8 @@
   <string name="button_volume_keys_title">Volum</string>
   <string name="button_volume_wake_title">Desperta amb els botons</string>
   <string name="button_volume_wake_summary">En prémer un botó de volum es despertarà el dispositiu</string>
+  <string name="volume_button_music_control_title">Control de la música</string>
+  <string name="volume_button_music_control_summary">Pressió llarga als botons de volum per canviar cançons amb la pantalla apagada</string>
   <string name="keys_action_sleep">Dorm</string>
   <string name="keys_action_omniswitch">Recents OmniSwitch</string>
   <string name="button_home_wake_title">Desperta amb els botons</string>
@@ -154,17 +156,14 @@
   <string name="statusbar_battery_charging_color_title">Color</string>
   <string name="statusbar_battery_charging_color_enable_title">Color durant la càrrega</string>
   <string name="battery_enable_title">Mostra la bateria</string>
-  <string name="button_brightness_title">Brillantor</string>
-  <string name="button_brightness_summary">Brillantor de la retroil·luminació dels botons</string>
+  <string name="button_backlight_title">Botó de retroil·luminació</string>
   <string name="button_timeout_title">Temps d\'espera de la retroil·luminació</string>
   <string name="button_timeout_summary">Inhabilitat al valor 0</string>
-  <string name="button_no_brightness">Mode fosc</string>
-  <string name="button_no_brightness_summary">No estableixis la brillantor del botó</string>
   <string name="button_link_brightness">Enllaça amb la pantalla</string>
   <string name="button_link_brightness_summary">Utilitza el nivell de brillantor de la pantalla</string>
   <string name="button_manual_brightness">Nivell de brillantor</string>
-  <string name="dialog_manual_brightness_title">Nivell de brillantor</string>
   <string name="unit_sec">sec</string>
+  <string name="button_backlight_enable_title">Habilita</string>
   <string name="navigation_bar_show_title">Mostra la barra de navegació</string>
   <string name="navigation_bar_show_summary">Força l\'activació de la barra de navegació</string>
   <string name="hardware_keys_disable_title">Desactiva les tecles</string>
@@ -172,7 +171,6 @@
   <string name="navbar_title">Barra de navegació</string>
   <string name="navbar_recents_style_title">Estil de recents</string>
   <string name="omniswitch_settings">Ajustaments</string>
-  <string name="omniswitch_dialog_running">L\'OmniSwitch no està habilitat. Habiliteu-lo i marqueu l\'opció \u2019Executa a l\'inici\u2019 a la configuració.</string>
   <string name="omniswitch_dialog_unavail">L\'OmniSwitch no està instal·lat.</string>
   <string name="omniswitch_title">Estil de recents</string>
   <string name="doze_brightness_level_title">Nivell de brillantor</string>
@@ -184,6 +182,7 @@
   <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Dreceres</string>
   <string name="lockscreen_voice_shortcut_title">Drecera a l\'ajuda de veu</string>
+  <string name="lockscreen_voice_shortcut_summary">Mostra l\'ajuda de veu en lloc del teclat del telèfon</string>
   <string name="lockscreen_shortcuts_enable_title">Habilita</string>
   <string name="lockscreen_clock_display_time_title">Mostra l\'hora</string>
   <string name="lockscreen_clock_display_date_title">Mostra la data</string>
@@ -194,6 +193,17 @@
   <string name="lockscreen_clock_size_title">Mida de l\'hora</string>
   <string name="lockscreen_clock_enable_title">Habilita</string>
   <string name="lockscreen_clock_shadow_title">Ombra</string>
+  <string name="lockscreen_shortcuts_title">Dreceres personalitzades d\'aplicacions</string>
+  <string name="lockscreen_shortcuts_summary">Aplicacions que es mostren a la pantalla de bloqueig per a accedir-hi ràpid. Pressió llarga per ocultar-ho.</string>
+  <string name="lockscreen_shortcut_add_dialog_title">Afegeix una drecera</string>
+  <string name="lockscreen_shortcut_apps_title">Dreceres</string>
+  <string name="lockscreen_shortcut_add">Afegeix\u2026</string>
+  <string name="lockscreen_indicator_display_title">Mostra el text d\'estat inferior</string>
+  <string name="lockscreen_indicator_display_summary">Nota: les dreceres personalizades ocultaran el text</string>
+  <string name="lockscreen_camera_shortcut_enable_title">Mostra la drecera de la càmera</string>
+  <string name="lockscreen_camera_shortcut_enable_summary">La visibilitat depèn de la configuració del sistema</string>
+  <string name="lockscreen_left_shortcut_enable_title">Mostra la drecera del teclat del telèfon o de l\'ajuda de veu</string>
+  <string name="lockscreen_left_shortcut_enable_summary">La visibilitat depèn de la configuració del sistema</string>
   <string name="notification_title">Tauler d\'avisos</string>
   <string name="status_bar_custom_header_title">Imatge de capçalera personalitzada</string>
   <string name="status_bar_custom_header_summary">Habilita la imatge de capçalera del tauler d\'avisos</string>
@@ -252,12 +262,16 @@
   <string name="dashboard_columns_four">4</string>
   <string name="dashboard_colums_resize_title">Ajustament de l\'orientació</string>
   <string name="dashboard_colums_resize_summary">Ajusta la configuració de les columnes automàticament segons l\'orientació.</string>
+  <string name="dashboard_divider_show_title">Mostra el divisor de columnes</string>
   <!-- global acions config -->
   <string name="global_actions_power_title">Energia</string>
   <string name="global_actions_reboot_title">Reinici</string>
   <string name="global_actions_lockdown_title">Bloqueig</string>
   <string name="global_actions_settings_title">Configuració</string>
   <string name="global_actions_airplane_title">Mode avió</string>
+  <string name="global_actions_screenshot_title">Captura de pantalla</string>
+  <string name="global_actions_screenrecord_title">Gravació de pantalla</string>
+  <string name="global_actions_torch_title">Llanterna</string>
   <string name="global_actions_users_title">Usuaris</string>
   <string name="global_actions_voiceassist_title">Ajuda de veu</string>
   <string name="global_actions_silent_title">Mode silenciós</string>

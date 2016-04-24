@@ -150,16 +150,11 @@
   <string name="statusbar_charging_image_title">Wskaźnik ładowania</string>
   <string name="statusbar_category_charging_title">Ładowanie</string>
   <string name="statusbar_charging_image_summary">Wyświetlaj ikonę pioruna podczas ładowania. Ukrywa procentowy stan baterii</string>
-  <string name="button_brightness_title">Jasność</string>
-  <string name="button_brightness_summary">Jasność podświetlenia przycisków</string>
   <string name="button_timeout_title">Opóźnienie podświetlenia</string>
   <string name="button_timeout_summary">Wyłączone dla wartości 0</string>
-  <string name="button_no_brightness">Tryb ciemny</string>
-  <string name="button_no_brightness_summary">Nie ustawiaj jasności przycisków</string>
   <string name="button_link_brightness">Powiąż z ekranem</string>
   <string name="button_link_brightness_summary">Użyj poziomu jasności ekranu</string>
   <string name="button_manual_brightness">Poziom jasności</string>
-  <string name="dialog_manual_brightness_title">Poziom jasności</string>
   <string name="unit_sec">sek</string>
   <string name="navigation_bar_show_title">Pokaż pasek nawigacyjny</string>
   <string name="navigation_bar_show_summary">Wymuś pasek nawigacyjny</string>
@@ -168,7 +163,6 @@
   <string name="navbar_title">Pasek nawigacyjny</string>
   <string name="navbar_recents_style_title">Styl ostatnio otwartych aplikacji</string>
   <string name="omniswitch_settings">Ustawienia</string>
-  <string name="omniswitch_dialog_running">OmniSwitch jest obecnie wyłączony. Proszę go włączyć i zaznaczyć opcję \u2019Uruchom podczas startu\u2019 w ustawieniach.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch nie jest zainstalowany.</string>
   <string name="omniswitch_title">Styl ostatnio otwartych aplikacji</string>
   <string name="doze_brightness_level_title">Poziom jasności</string>

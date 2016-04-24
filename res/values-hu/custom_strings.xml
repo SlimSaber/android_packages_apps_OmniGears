@@ -56,6 +56,8 @@
   <string name="button_volume_keys_title">Hangerő</string>
   <string name="button_volume_wake_title">Hangerő gombra ébredés</string>
   <string name="button_volume_wake_summary">A hangerő gomb megnyomása felébreszti a készüléket</string>
+  <string name="volume_button_music_control_title">Zene vezérlés</string>
+  <string name="volume_button_music_control_summary">Hosszan nyomva a hangerő gombokat a zeneszámok között válthat kikapcsolt képernyő mellett</string>
   <string name="keys_action_sleep">Alvó mód</string>
   <string name="keys_action_omniswitch">OmniSwitch előzmények</string>
   <string name="button_home_wake_title">Kezdőlap gombra ébredés</string>
@@ -154,17 +156,14 @@
   <string name="statusbar_battery_charging_color_title">Szín</string>
   <string name="statusbar_battery_charging_color_enable_title">Színek töltés közben</string>
   <string name="battery_enable_title">Akkumulátor megjelenítése</string>
-  <string name="button_brightness_title">Fényerő</string>
-  <string name="button_brightness_summary">Gomb háttérvilágítás</string>
+  <string name="button_backlight_title">Gomb háttérvilágítás</string>
   <string name="button_timeout_title">Háttérvilágítás időkorlátja</string>
   <string name="button_timeout_summary">A 0 érték esetén letiltva</string>
-  <string name="button_no_brightness">Sötét mód</string>
-  <string name="button_no_brightness_summary">Ne állítson be fényerőt a hardver gombra</string>
   <string name="button_link_brightness">Képernyőhöz csatolás</string>
   <string name="button_link_brightness_summary">Használja a képernyő fényerő szintjét</string>
   <string name="button_manual_brightness">Fényerő szintek</string>
-  <string name="dialog_manual_brightness_title">Fényerő szintek</string>
   <string name="unit_sec">mp</string>
+  <string name="button_backlight_enable_title">Engedélyezés</string>
   <string name="navigation_bar_show_title">Navigációs sáv megjelenítése</string>
   <string name="navigation_bar_show_summary">Navigációs sáv engedélyezésének kényszerítése</string>
   <string name="hardware_keys_disable_title">Gombok letiltása</string>
@@ -172,7 +171,7 @@
   <string name="navbar_title">Navigációs sáv</string>
   <string name="navbar_recents_style_title">Előzmények stílusa</string>
   <string name="omniswitch_settings">Beállítások</string>
-  <string name="omniswitch_dialog_running">OmniSwitch jelenleg nem engedélyezett. Kérjük, engedélyezze azt, és jelölje be a \u2019Bootoláskor indul\u2019 lehetőséget a beállításokban.</string>
+  <string name="omniswitch_dialog_running_new">OmniSwitch jelenleg nem engedélyezett. Kérjük, engedélyezze az alkalmazás beállításaiban.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch nincs telepítve.</string>
   <string name="omniswitch_title">Előzmények stílusa</string>
   <string name="doze_brightness_level_title">Fényerő szintek</string>
@@ -184,6 +183,7 @@
   <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Parancsikonok</string>
   <string name="lockscreen_voice_shortcut_title">Hangsegéd parancsikon</string>
+  <string name="lockscreen_voice_shortcut_summary">Hangsegéd megjelenítése a tárcsázó helyett</string>
   <string name="lockscreen_shortcuts_enable_title">Engedélyezés</string>
   <string name="lockscreen_clock_display_time_title">Idő mutatása</string>
   <string name="lockscreen_clock_display_date_title">Dátum mutatása</string>
@@ -194,6 +194,17 @@
   <string name="lockscreen_clock_size_title">Idő mérete</string>
   <string name="lockscreen_clock_enable_title">Engedélyezés</string>
   <string name="lockscreen_clock_shadow_title">Árnyék</string>
+  <string name="lockscreen_shortcuts_title">Egyéni alkalmazás parancsikonok</string>
+  <string name="lockscreen_shortcuts_summary">Alkalmazások megjelenítése a gyors hozzáférésért a zárképernyőn. Hosszan nyomva elrejti.</string>
+  <string name="lockscreen_shortcut_add_dialog_title">Parancsikon hozzáadása</string>
+  <string name="lockscreen_shortcut_apps_title">Parancsikonok</string>
+  <string name="lockscreen_shortcut_add">Hozzáad\u2026</string>
+  <string name="lockscreen_indicator_display_title">Alsó állapot szöveg megjelenítése</string>
+  <string name="lockscreen_indicator_display_summary">Megjegyzés: egyéni parancsikonok elrejtik a szöveget</string>
+  <string name="lockscreen_camera_shortcut_enable_title">Kamera parancsikon megjelenítése</string>
+  <string name="lockscreen_camera_shortcut_enable_summary">Láthatóság a rendszerbeállításoktól függ</string>
+  <string name="lockscreen_left_shortcut_enable_title">Tárcsázó, vagy hangsegéd parancsikon megjelenítése</string>
+  <string name="lockscreen_left_shortcut_enable_summary">Láthatóság a rendszerbeállításoktól függ</string>
   <string name="notification_title">Értesítési panel</string>
   <string name="status_bar_custom_header_title">Egyéni fejléc kép</string>
   <string name="status_bar_custom_header_summary">Értesítési panel fejléc kép engedélyezése</string>
@@ -252,12 +263,16 @@
   <string name="dashboard_columns_four">4</string>
   <string name="dashboard_colums_resize_title">Tájoláshoz igazítás</string>
   <string name="dashboard_colums_resize_summary">Automatikusan a tájoláshoz igazítja a beállítások oszlopokat.</string>
+  <string name="dashboard_divider_show_title">Oszlop-elválasztó megjelenítése</string>
   <!-- global acions config -->
   <string name="global_actions_power_title">Kikapcsolás</string>
   <string name="global_actions_reboot_title">Újraindítás</string>
   <string name="global_actions_lockdown_title">Zárolás</string>
   <string name="global_actions_settings_title">Beállitások</string>
   <string name="global_actions_airplane_title">Repülőgép üzemmód</string>
+  <string name="global_actions_screenshot_title">Képernyőkép</string>
+  <string name="global_actions_screenrecord_title">Képernyő felvétel</string>
+  <string name="global_actions_torch_title">Zseblámpa</string>
   <string name="global_actions_users_title">Felhasználók</string>
   <string name="global_actions_voiceassist_title">Hangsegéd</string>
   <string name="global_actions_silent_title">Néma üzemmód</string>

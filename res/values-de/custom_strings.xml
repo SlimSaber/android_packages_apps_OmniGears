@@ -56,6 +56,8 @@
   <string name="button_volume_keys_title">Lautstärke</string>
   <string name="button_volume_wake_title">Aufwecken mit Lautstärketaste</string>
   <string name="button_volume_wake_summary">Drücken einer Lautstärketaste weckt Ihr Gerät</string>
+  <string name="volume_button_music_control_title">Musik-Steuerung</string>
+  <string name="volume_button_music_control_summary">Bei abgeschaltetem Bildschirm durch langen Druck auf Lautstärketasten zum nächsten / vorherigen Titel springen</string>
   <string name="keys_action_sleep">Schlafmodus</string>
   <string name="keys_action_omniswitch">OmniSwitch zuletzt Verwendete</string>
   <string name="button_home_wake_title">Aufwecken mit Home-Taste</string>
@@ -154,17 +156,14 @@
   <string name="statusbar_battery_charging_color_title">Farbe</string>
   <string name="statusbar_battery_charging_color_enable_title">Farbe während des Ladevorgangs</string>
   <string name="battery_enable_title">Akku anzeigen</string>
-  <string name="button_brightness_title">Helligkeit</string>
-  <string name="button_brightness_summary">Helligkeit Tastenhintergrundbeleuchtung</string>
+  <string name="button_backlight_title">Schaltflächen-Hintergrundbeleuchtung</string>
   <string name="button_timeout_title">Hintergrundbeleuchtungszeit</string>
   <string name="button_timeout_summary">Deaktiviert bei Wert 0</string>
-  <string name="button_no_brightness">Dunkler Modus</string>
-  <string name="button_no_brightness_summary">Tastenhelligkeit nicht einstellen</string>
   <string name="button_link_brightness">Mit Bildschirm verknüpfen</string>
   <string name="button_link_brightness_summary">Verwende Bildschirmhelligkeit</string>
   <string name="button_manual_brightness">Helligkeitsstufe</string>
-  <string name="dialog_manual_brightness_title">Helligkeitsstufe</string>
   <string name="unit_sec">sek</string>
+  <string name="button_backlight_enable_title">Einschalten</string>
   <string name="navigation_bar_show_title">Navigationsleiste einblenden</string>
   <string name="navigation_bar_show_summary">Navigationsleiste immer anzeigen</string>
   <string name="hardware_keys_disable_title">Tasten deaktivieren</string>
@@ -172,7 +171,7 @@
   <string name="navbar_title">Navigationsleiste</string>
   <string name="navbar_recents_style_title">Darstellung zuletzt verwendeter Apps</string>
   <string name="omniswitch_settings">Einstellungen</string>
-  <string name="omniswitch_dialog_running">OmniSwitch ist derzeit nicht aktiviert. Bitte aktivieren und die \u2019Beim booten starten\u2019-Option in den Einstellungen wählen.</string>
+  <string name="omniswitch_dialog_running_new">OmniSwitch ist derzeit nicht aktiviert. Bitte aktivieren Sie es in den App-Einstellungen.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch ist nicht installiert.</string>
   <string name="omniswitch_title">Darstellung zuletzt verwendeter Apps</string>
   <string name="doze_brightness_level_title">Helligkeitsstufe</string>
@@ -184,6 +183,7 @@
   <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Verknüpfungen</string>
   <string name="lockscreen_voice_shortcut_title">Spracheingabe-Verknüpfung</string>
+  <string name="lockscreen_voice_shortcut_summary">Zeige Spracheingabe- statt Wählhilfe-Verknüpfung</string>
   <string name="lockscreen_shortcuts_enable_title">Einschalten</string>
   <string name="lockscreen_clock_display_time_title">Uhrzeit anzeigen</string>
   <string name="lockscreen_clock_display_date_title">Datum anzeigen</string>
@@ -194,6 +194,17 @@
   <string name="lockscreen_clock_size_title">Größe der Uhrzeit</string>
   <string name="lockscreen_clock_enable_title">Einschalten</string>
   <string name="lockscreen_clock_shadow_title">Schatten</string>
+  <string name="lockscreen_shortcuts_title">Benutzerdefinierte Anwendungsverknüpfungen</string>
+  <string name="lockscreen_shortcuts_summary">Anwendungen, die auf dem Sperrbildschirm für Schnellzugriff angezeigt werden. Lange drücken um auszublenden.</string>
+  <string name="lockscreen_shortcut_add_dialog_title">Verknüpfung erstellen</string>
+  <string name="lockscreen_shortcut_apps_title">Verknüpfungen</string>
+  <string name="lockscreen_shortcut_add">Hinzufügen\u2026</string>
+  <string name="lockscreen_indicator_display_title">Unteren Statustext anzeigen</string>
+  <string name="lockscreen_indicator_display_summary">Hinweis: benutzerdefinierte Verknüpfungen werden Text verdecken</string>
+  <string name="lockscreen_camera_shortcut_enable_title">Kamera Verknüpfung anzeigen</string>
+  <string name="lockscreen_camera_shortcut_enable_summary">Sichtbarkeit hängt von Systemeinstellungen ab</string>
+  <string name="lockscreen_left_shortcut_enable_title">Wählhilfe- oder Sprachassistent-Verknüpfung anzeigen</string>
+  <string name="lockscreen_left_shortcut_enable_summary">Sichtbarkeit hängt von Systemeinstellungen ab</string>
   <string name="notification_title">Benachrichtigungsfeld</string>
   <string name="status_bar_custom_header_title">Benutzerdefiniertes Kopfzeilenbild</string>
   <string name="status_bar_custom_header_summary">Benutzerdefiniertes Kopfzeilenbild im Benachrichtigungsfeld aktivieren</string>
@@ -252,12 +263,16 @@
   <string name="dashboard_columns_four">4</string>
   <string name="dashboard_colums_resize_title">Ausrichtung anpassen</string>
   <string name="dashboard_colums_resize_summary">Schnelleinstellungen automatisch an die Ausrichtung anpassen.</string>
+  <string name="dashboard_divider_show_title">Spaltenabtrennung anzeigen</string>
   <!-- global acions config -->
   <string name="global_actions_power_title">Ein/Aus</string>
   <string name="global_actions_reboot_title">Neustart</string>
   <string name="global_actions_lockdown_title">Sperren</string>
   <string name="global_actions_settings_title">Einstellungen</string>
   <string name="global_actions_airplane_title">Flugmodus</string>
+  <string name="global_actions_screenshot_title">Bildschirmfoto</string>
+  <string name="global_actions_screenrecord_title">Bildschirmaufnahme</string>
+  <string name="global_actions_torch_title">Taschenlampe</string>
   <string name="global_actions_users_title">Nutzer</string>
   <string name="global_actions_voiceassist_title">Sprachassistent</string>
   <string name="global_actions_silent_title">Lautlos</string>

@@ -143,16 +143,11 @@
   <string name="statusbar_charging_image_title">Laad indicator</string>
   <string name="statusbar_category_charging_title">Opladen</string>
   <string name="statusbar_charging_image_summary">Weergeef dikgedrukte indicator gedurende het opladen. Verberg percentage</string>
-  <string name="button_brightness_title">Helderheid</string>
-  <string name="button_brightness_summary">Helderheid achtergrondverlichting knop</string>
   <string name="button_timeout_title">Timeout achtergrondverlichting</string>
   <string name="button_timeout_summary">Uitgeschakeld op waarde 0</string>
-  <string name="button_no_brightness">Donkere modus</string>
-  <string name="button_no_brightness_summary">Knop helderheid niet instellen</string>
   <string name="button_link_brightness">Link naar scherm</string>
   <string name="button_link_brightness_summary">Gebruik helderheidsniveau scherm</string>
   <string name="button_manual_brightness">Helderheidsniveau</string>
-  <string name="dialog_manual_brightness_title">Helderheidsniveau</string>
   <string name="unit_sec">s</string>
   <string name="navigation_bar_show_title">Navigatiebalk tonen</string>
   <string name="navigation_bar_show_summary">Forceer inschakelen navigatiebalk</string>
@@ -161,7 +156,6 @@
   <string name="navbar_title">Navigatiebalk</string>
   <string name="navbar_recents_style_title">Stijl van laatst gebruikte apps</string>
   <string name="omniswitch_settings">Instellingen</string>
-  <string name="omniswitch_dialog_running">OmniSwitch is momenteel niet ingeschakeld. Gelieve het in te schakelen en kies de \u2019Start na opstarten\u2019 optie in instellingen.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch is niet geïnstalleerd.</string>
   <string name="omniswitch_title">Stijl van laatst gebruikte apps</string>
   <string name="doze_brightness_level_title">Helderheidsniveau</string>

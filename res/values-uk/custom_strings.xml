@@ -138,16 +138,11 @@
   <string name="statusbar_charging_image_title">Індикатор зарядки</string>
   <string name="statusbar_category_charging_title">Зарядка</string>
   <string name="statusbar_charging_image_summary">Показати значок блискавки під час зарядки. Приховує відсотки над акумулятором</string>
-  <string name="button_brightness_title">Яскравість</string>
-  <string name="button_brightness_summary">Яскравість підсвічування кнопок</string>
   <string name="button_timeout_title">Тайм-аут підсвічування</string>
   <string name="button_timeout_summary">Вимикається при нульовому значенні</string>
-  <string name="button_no_brightness">Темний режим</string>
-  <string name="button_no_brightness_summary">Не встановлювати яскравість кнопок</string>
   <string name="button_link_brightness">У відповідності з екраном</string>
   <string name="button_link_brightness_summary">Використовувати яскравість екрану</string>
   <string name="button_manual_brightness">Рівень яскравості</string>
-  <string name="dialog_manual_brightness_title">Яскравість</string>
   <string name="unit_sec">сек</string>
   <string name="navigation_bar_show_title">Показати панель навігації</string>
   <string name="navigation_bar_show_summary">Примусове увімкнення панелі навігації</string>
