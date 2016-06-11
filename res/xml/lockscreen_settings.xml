@@ -64,6 +64,12 @@
             android:title="@string/lockscreen_indicator_display_title"
             android:summary="@string/lockscreen_indicator_display_summary"
             android:defaultValue="true" />
+
+        <com.android.settings.preference.SecureSettingSwitchPreference
+            android:key="lockscreen_qs_disabled"
+            android:title="@string/lockscreen_qs_disabled_title"
+            android:summary="@string/lockscreen_qs_disabled_summary"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
