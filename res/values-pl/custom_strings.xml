@@ -56,6 +56,8 @@
   <string name="button_volume_keys_title">Głośność</string>
   <string name="button_volume_wake_title">Wybudź przyciskiem</string>
   <string name="button_volume_wake_summary">Naciśnięcie przycisku głośności wybudzi urządzenie</string>
+  <string name="volume_button_music_control_title">Kontrola muzyki</string>
+  <string name="volume_button_music_control_summary">Długie przytrzymanie przycisku głośności zmieni utwór, gdy ekran jest wyłączony</string>
   <string name="keys_action_sleep">Uśpij</string>
   <string name="keys_action_omniswitch">Panel ostatnch aplikacji Omni</string>
   <string name="button_home_wake_title">Wybudź przyciskiem</string>
@@ -140,6 +142,7 @@
   <string name="led_color_blue">Niebieski</string>
   <string name="statusbar_title">Pasek stanu</string>
   <string name="battery_title">Wyświetlanie stanu baterii</string>
+  <string name="statusbar_battery_summary">Wybierz styl ikony baterii</string>
   <string name="battery_style_title">Styl</string>
   <string name="battery_percent_title">Pokaż procent</string>
   <string name="battery_percent_none">Nigdy</string>
@@ -150,12 +153,17 @@
   <string name="statusbar_charging_image_title">Wskaźnik ładowania</string>
   <string name="statusbar_category_charging_title">Ładowanie</string>
   <string name="statusbar_charging_image_summary">Wyświetlaj ikonę pioruna podczas ładowania. Ukrywa procentowy stan baterii</string>
+  <string name="statusbar_battery_charging_color_title">Kolor</string>
+  <string name="statusbar_battery_charging_color_enable_title">Kolor podczas ładowania</string>
+  <string name="battery_enable_title">Pokaż baterię</string>
+  <string name="button_backlight_title">Podświetlenie przycisków</string>
   <string name="button_timeout_title">Opóźnienie podświetlenia</string>
   <string name="button_timeout_summary">Wyłączone dla wartości 0</string>
   <string name="button_link_brightness">Powiąż z ekranem</string>
   <string name="button_link_brightness_summary">Użyj poziomu jasności ekranu</string>
   <string name="button_manual_brightness">Poziom jasności</string>
   <string name="unit_sec">sek</string>
+  <string name="button_backlight_enable_title">Włącz</string>
   <string name="navigation_bar_show_title">Pokaż pasek nawigacyjny</string>
   <string name="navigation_bar_show_summary">Wymuś pasek nawigacyjny</string>
   <string name="hardware_keys_disable_title">Wyłącz klawisze</string>
@@ -163,6 +171,7 @@
   <string name="navbar_title">Pasek nawigacyjny</string>
   <string name="navbar_recents_style_title">Styl ostatnio otwartych aplikacji</string>
   <string name="omniswitch_settings">Ustawienia</string>
+  <string name="omniswitch_dialog_running_new">OmniSwitch nie jest obecnie włączony. Włącz go w ustawieniach aplikacji.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch nie jest zainstalowany.</string>
   <string name="omniswitch_title">Styl ostatnio otwartych aplikacji</string>
   <string name="doze_brightness_level_title">Poziom jasności</string>
@@ -174,10 +183,35 @@
   <!-- Lock screen config -->
   <string name="lockscreen_shortcut_title">Skróty</string>
   <string name="lockscreen_voice_shortcut_title">Skrót asystenta głosowego</string>
+  <string name="lockscreen_voice_shortcut_summary">Pokaż skrót asystenta głosowego zamiast dialera</string>
+  <string name="lockscreen_shortcuts_enable_title">Włącz</string>
+  <string name="lockscreen_clock_display_time_title">Pokaż czas</string>
+  <string name="lockscreen_clock_display_date_title">Pokaż datę</string>
+  <string name="lockscreen_clock_display_alarm_title">Pokaż następny alarm</string>
+  <string name="lockscreen_clock">Zegar</string>
+  <string name="lockscreen_clock_font_title">Czcionka czasu</string>
+  <string name="lockscreen_clock_color_title">Czas i kolor daty</string>
+  <string name="lockscreen_clock_size_title">Rozmiar zegara</string>
+  <string name="lockscreen_clock_enable_title">Włącz</string>
+  <string name="lockscreen_clock_shadow_title">Cień</string>
+  <string name="lockscreen_shortcuts_title">Niestandardowe skróty aplikacji</string>
+  <string name="lockscreen_shortcuts_summary">Aplikacje wyświetlane na ekranie blokady dla szybkiego dostępu. Przytrzymaj dłużej, aby ukryć.</string>
+  <string name="lockscreen_shortcut_add_dialog_title">Dodaj skrót</string>
+  <string name="lockscreen_shortcut_apps_title">Skróty</string>
+  <string name="lockscreen_shortcut_add">Dodaj\u2026</string>
+  <string name="lockscreen_indicator_display_title">Pokaż tekst stanu</string>
+  <string name="lockscreen_indicator_display_summary">Uwaga: niestandardowe skróty ukryją tekst</string>
+  <string name="lockscreen_camera_shortcut_enable_title">Pokaż skrót aparatu</string>
+  <string name="lockscreen_camera_shortcut_enable_summary">Dostępność zależy od konfiguracji systemu</string>
+  <string name="lockscreen_left_shortcut_enable_title">Pokaż skrót dialera albo asystenta głosowego</string>
+  <string name="lockscreen_left_shortcut_enable_summary">Dostępność zależy od konfiguracji systemu</string>
   <string name="notification_title">Panel powiadomień</string>
   <string name="status_bar_custom_header_title">Niestandardowe tło panelu powiadomień</string>
   <string name="status_bar_custom_header_summary">Włącz tło panelu powiadomień</string>
   <string name="daylight_header_pack_title">Paczka teł ekranu powiadomień</string>
+  <string name="status_bar_custom_header_shadow_title">Cień obrazu nagłówka</string>
+  <string name="status_bar_custom_header_shadow_summary">Dla lepszej widoczności na jasnych obrazach</string>
+  <string name="unit_percent">\u0025</string>
   <!-- Network traffic -->
   <string name="network_traffic_title">Ruch sieciowy</string>
   <string name="show_network_traffic_state">Monitor ruch sieciowego na pasku stanu</string>
@@ -227,5 +261,26 @@
   <string name="dashboard_columns_tablet_default">Domyślne</string>
   <string name="dashboard_columns_three">3</string>
   <string name="dashboard_columns_four">4</string>
+  <string name="dashboard_colums_resize_title">Dopasowanie orientacji ekranu</string>
+  <string name="dashboard_colums_resize_summary">Automatycznie dopasuj ustawienia kolumn bazując na orientacji ekranu.</string>
+  <string name="dashboard_divider_show_title">Pokaż rozdzielacz kolumn</string>
   <!-- global acions config -->
+  <string name="global_actions_power_title">Zasilanie</string>
+  <string name="global_actions_reboot_title">Uruchom ponownie</string>
+  <string name="global_actions_lockdown_title">Zablokuj</string>
+  <string name="global_actions_settings_title">Ustawienia</string>
+  <string name="global_actions_airplane_title">Tryb samolotowy</string>
+  <string name="global_actions_screenshot_title">Zrzut ekranu</string>
+  <string name="global_actions_screenrecord_title">Nagrywanie ekranu</string>
+  <string name="global_actions_torch_title">Latarka</string>
+  <string name="global_actions_users_title">Użytkownicy</string>
+  <string name="global_actions_voiceassist_title">Asystent głosowy</string>
+  <string name="global_actions_silent_title">Tryb cichy</string>
+  <string name="global_actions_dnd_title">Nie przeszkadzać</string>
+  <string name="global_actions_title">Menu zasilania</string>
+  <string name="global_actions_summary">Akcje wyświetlane w menu zasilania</string>
+  <string name="global_actions_header">Niektóre akcje są widoczne w zależności od konfiguracji lub tylko wtedy, gdy urządzenie jest odblokowane</string>
+  <string name="font_sample_text">11:57</string>
+  <!--<string name="screenshot_crop_behavior_title"></string>
+    <string name="screenshot_crop_behavior_summary"></string>-->
 </resources>

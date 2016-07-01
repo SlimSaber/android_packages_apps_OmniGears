@@ -31,7 +31,7 @@
   <string name="keys_back_long_press_title">Tipka Nazaj (dolg pritisk)</string>
   <string name="keys_home_press_title">Tipka Domov</string>
   <string name="keys_home_long_press_title">Tipka Domov (dolg pritisk)</string>
-  <string name="keys_home_double_tap_title">Tipka Domov (dvojni tap)</string>
+  <string name="keys_home_double_tap_title">Tipka Domov (dvojni dotik)</string>
   <string name="keys_menu_press_title">Tipka Meni</string>
   <string name="keys_menu_long_press_title">Tipka Meni (dolg pritisk)</string>
   <string name="keys_assist_press_title">Tipka za iskanje</string>
@@ -50,7 +50,7 @@
   <string name="keys_action_kill_app">Uniči program</string>
   <string name="keys_action_normal">Običajni pritisk</string>
   <string name="keys_action_long">Dolg pritisk</string>
-  <string name="keys_action_double">Dvojni tap</string>
+  <string name="keys_action_double">Dvojni dotik</string>
   <string name="dialog_no_home_key_title">Brez dejanja za Domov</string>
   <string name="no_home_key">Za dejanje \"Domov\" nimate dodeljenega gumba!  To lahko naredi vašo napravo neuporabno!</string>
   <string name="button_volume_keys_title">Glasnost</string>
@@ -74,8 +74,8 @@
   <string name="button_back_kill_timeout_1000ms">1000 ms</string>
   <string name="button_back_kill_timeout_1500ms">1500 ms</string>
   <!-- Double tap to sleep -->
-  <string name="double_tap_to_sleep_title">Dvakrat tapnite za spanje</string>
-  <string name="double_tap_to_sleep_summary">Dvakrat tapnite na vrstico stanja, da izklopite zaslon</string>
+  <string name="double_tap_to_sleep_title">Dvakrat se dotaknite za spanje</string>
+  <string name="double_tap_to_sleep_summary">Dvakrat se dotaknite vrstice stanja, da izklopite zaslon</string>
   <!-- Doze pulse (ambient display) options -->
   <string name="doze_overwrite_value_title">Prepiši vrednost</string>
   <string name="doze_overwrite_value_summary">Dovoli prepis privzete vrednosti z uporabniško</string>
@@ -281,4 +281,17 @@
   <string name="global_actions_summary">Dejanja menija gumba za vklop/izklop</string>
   <string name="global_actions_header">Nekatera dejanja so vidna glede na nastavitev ali samo, če je naprava odklenjena</string>
   <string name="font_sample_text">11:57</string>
+  <string name="screenshot_crop_and_share_title">Obrezovanje in deljenje zaslonske slike</string>
+  <string name="screenshot_crop_and_share_summary">Prikaži okno urejevalnika po zajemu zaslonske slike za nekatera opravila, kot so obrezovanje, shranjevanje ali deljenje</string>
+  <!--<string name="screenshot_crop_behavior_title"></string>
+    <string name="screenshot_crop_behavior_summary"></string>-->
+  <string name="lockscreen_qs_disabled_title">Onemogoči hitre nastavitve, ko je zaklenjeno</string>
+  <string name="lockscreen_qs_disabled_summary">Onemogoči razširljive hitre nastavitve na varnih zaklepanjih zaslona</string>
+  <string name="status_bar_quick_qs_pulldown_title">Hitri spustni seznam</string>
+  <string name="status_bar_quick_qs_pulldown_summary">%1$s rob vrstice stanja spusti Hitre nastavitve</string>
+  <string name="status_bar_quick_qs_pulldown_summary_left">Levi</string>
+  <string name="status_bar_quick_qs_pulldown_summary_right">Desni</string>
+  <string name="status_bar_quick_qs_pulldown_off">Izk.</string>
+  <string name="status_bar_quick_qs_pulldown_left">Levi</string>
+  <string name="status_bar_quick_qs_pulldown_right">Desni</string>
 </resources>

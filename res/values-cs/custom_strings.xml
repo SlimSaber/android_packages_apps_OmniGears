@@ -171,6 +171,7 @@
   <string name="navbar_title">Navigační lišta</string>
   <string name="navbar_recents_style_title">Styl nedávných</string>
   <string name="omniswitch_settings">Nastavení</string>
+  <string name="omniswitch_dialog_running_new">OmniSwitch není v současnosti povolena. Prosím, povolte v nastavení aplikace.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch není nainstalována.</string>
   <string name="omniswitch_title">Styl nedávných</string>
   <string name="doze_brightness_level_title">Úroveň jasu</string>
@@ -280,4 +281,8 @@
   <string name="global_actions_summary">Akce v nabídce tlačítka Vypnout</string>
   <string name="global_actions_header">Některé akce jsou viditelné v závislosti na nastavení nebo pouze v případě, že zařízení je odemčené</string>
   <string name="font_sample_text">11:57</string>
+  <string name="screenshot_crop_and_share_title">Oříznout snímek displeje &amp; sdílet</string>
+  <string name="screenshot_crop_and_share_summary">Zobrazit okno editoru po sejmutí displeje, s cílem provést některé operace jako je oříznutí, ukládání nebo sdílení</string>
+  <!--<string name="screenshot_crop_behavior_title"></string>
+    <string name="screenshot_crop_behavior_summary"></string>-->
 </resources>

@@ -154,4 +154,6 @@
   <!-- Enable Tablet Style navigation bar -->
   <!-- Dashboard columns -->
   <!-- global acions config -->
+  <!--<string name="screenshot_crop_behavior_title"></string>
+    <string name="screenshot_crop_behavior_summary"></string>-->
 </resources>

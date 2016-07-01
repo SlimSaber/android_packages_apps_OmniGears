@@ -281,4 +281,17 @@
   <string name="global_actions_summary">Možnosti zobrazované pri vypnutí</string>
   <string name="global_actions_header">Niektoré voľby sú viditeľné v závislosti od nastavení alebo len pri odomknutom zariadení</string>
   <string name="font_sample_text">11:57</string>
+  <string name="screenshot_crop_and_share_title">Orezanie snímky obrazovky &amp; zdieľanie</string>
+  <string name="screenshot_crop_and_share_summary">Po vyhotovení snímky obrazovky zobraziť okno editora pre operácie ako orezanie, uloženie alebo zdieľanie</string>
+  <!--<string name="screenshot_crop_behavior_title"></string>
+    <string name="screenshot_crop_behavior_summary"></string>-->
+  <string name="lockscreen_qs_disabled_title">Pri uzamknutí zakázať rýchle nastavenia</string>
+  <string name="lockscreen_qs_disabled_summary">Pri uzamknutej obrazovke zakáže vyvolanie rýchlych nastavení</string>
+  <string name="status_bar_quick_qs_pulldown_title">Rýchle nastavenie</string>
+  <string name="status_bar_quick_qs_pulldown_summary">%1$s šírky stavovej lišty aktivuje Rýchle nastavenia</string>
+  <string name="status_bar_quick_qs_pulldown_summary_left">Vľavo</string>
+  <string name="status_bar_quick_qs_pulldown_summary_right">Vpravo</string>
+  <string name="status_bar_quick_qs_pulldown_off">Vyp</string>
+  <string name="status_bar_quick_qs_pulldown_left">Vľavo</string>
+  <string name="status_bar_quick_qs_pulldown_right">Vpravo</string>
 </resources>

@@ -219,4 +219,6 @@ Schakel het tonen van het weer in het notificatiepaneel in</string>
   <string name="dashboard_columns_phone_default">Standaard</string>
   <string name="dashboard_columns_tablet_default">Standaard</string>
   <!-- global acions config -->
+  <!--<string name="screenshot_crop_behavior_title"></string>
+    <string name="screenshot_crop_behavior_summary"></string>-->
 </resources>

@@ -171,6 +171,7 @@
   <string name="navbar_title">Barra de navegação</string>
   <string name="navbar_recents_style_title">Estilo de recentes</string>
   <string name="omniswitch_settings">Configurações</string>
+  <string name="omniswitch_dialog_running_new">O OmniSwitch não está ativado. Por favor, ative nas configurações da aplicação.</string>
   <string name="omniswitch_dialog_unavail">OmniSwitch não está instalado.</string>
   <string name="omniswitch_title">Estilo de recentes</string>
   <string name="doze_brightness_level_title">Nível do brilho</string>
@@ -280,4 +281,6 @@
   <string name="global_actions_summary">Ações mostradas no menu de energia</string>
   <string name="global_actions_header">Algumas ações são apenas visíveis, dependendo da configuração ou somente se o dispositivo é desbloqueado</string>
   <string name="font_sample_text">11:57</string>
+  <!--<string name="screenshot_crop_behavior_title"></string>
+    <string name="screenshot_crop_behavior_summary"></string>-->
 </resources>

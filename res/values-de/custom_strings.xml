@@ -281,4 +281,17 @@
   <string name="global_actions_summary">Im Ein/Aus-Menü angezeigte Aktionen</string>
   <string name="global_actions_header">Einige Aktionen sind nur abhängig von den Einstellungen oder wenn das Gerät entsperrt ist sichtbar</string>
   <string name="font_sample_text">11:57</string>
+  <string name="screenshot_crop_and_share_title">Bildschirmfoto zuschneiden &amp; teilen</string>
+  <string name="screenshot_crop_and_share_summary">Nach der Aufnahme eines Bildschirmfotos einen Editor zur weiteren Bearbeitung anzeigen</string>
+  <!--<string name="screenshot_crop_behavior_title"></string>
+    <string name="screenshot_crop_behavior_summary"></string>-->
+  <string name="lockscreen_qs_disabled_title">Schnelleinstellungen bei gesperrtem Bildschirm deaktivieren</string>
+  <string name="lockscreen_qs_disabled_summary">Zugriff auf die Schnelleinstellungen bei gesichertem Sperrbildschirm deaktivieren</string>
+  <string name="status_bar_quick_qs_pulldown_title">Schnelles Öffnen</string>
+  <string name="status_bar_quick_qs_pulldown_summary">Die %1$s Ecke der Benachrichtigungsleiste öffnet die Schnelleinstellungen</string>
+  <string name="status_bar_quick_qs_pulldown_summary_left">linke</string>
+  <string name="status_bar_quick_qs_pulldown_summary_right">Rechts</string>
+  <string name="status_bar_quick_qs_pulldown_off">Deaktiviert</string>
+  <string name="status_bar_quick_qs_pulldown_left">Links</string>
+  <string name="status_bar_quick_qs_pulldown_right">Rechts</string>
 </resources>

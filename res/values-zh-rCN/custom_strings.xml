@@ -61,6 +61,7 @@
   <string name="button_home_wake_summary">按下主页键唤醒设备</string>
   <string name="button_home_answers_call_title">按钮接听电话</string>
   <string name="button_home_answers_call_summary">按下主页键将接听来电</string>
+  <string name="button_other_title">其他</string>
   <!-- Double tap to sleep -->
   <!-- Doze pulse (ambient display) options -->
   <string name="doze_overwrite_value_title">覆盖值</string>
@@ -121,5 +122,14 @@
   <!-- Navigationbar settings -->
   <!-- Enable Tablet Style navigation bar -->
   <!-- Dashboard columns -->
+  <string name="dashboard_columns_phone_default">默认</string>
+  <string name="dashboard_columns_two">2</string>
+  <string name="dashboard_columns_tablet_default">默认</string>
+  <string name="dashboard_columns_three">3</string>
+  <string name="dashboard_columns_four">4</string>
   <!-- global acions config -->
+  <string name="global_actions_header">部分选项根据设置仅在解锁后出现</string>
+  <string name="font_sample_text">11:57</string>
+  <!--<string name="screenshot_crop_behavior_title"></string>
+    <string name="screenshot_crop_behavior_summary"></string>-->
 </resources>

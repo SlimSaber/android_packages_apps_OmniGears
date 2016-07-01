@@ -281,4 +281,17 @@
   <string name="global_actions_summary">Kikapcsoló menüben látható műveletek</string>
   <string name="global_actions_header">Egyes tevékenységek csak a beállításai függvényében láthatóak, vagy csak akkor, ha a készülék fel van oldva</string>
   <string name="font_sample_text">11:57</string>
+  <string name="screenshot_crop_and_share_title">Képernyőmentés vágása és megosztása</string>
+  <string name="screenshot_crop_and_share_summary">Képernyőmentés után szerkesztő ablak megjelenítése annak érdekében, hogy bizonyos műveleteket, mint a vágás, mentés és megosztás megtehessen</string>
+  <!--<string name="screenshot_crop_behavior_title"></string>
+    <string name="screenshot_crop_behavior_summary"></string>-->
+  <string name="lockscreen_qs_disabled_title">Gyors beállítások letiltása zárolt állapotban</string>
+  <string name="lockscreen_qs_disabled_summary">Gyors beállítások kiterjesztésének tiltása biztonságos zárképernyőn</string>
+  <string name="status_bar_quick_qs_pulldown_title">Gyors legördítés</string>
+  <string name="status_bar_quick_qs_pulldown_summary">Gyors beállítások megjelenítése az állapotsáv %1$s oldalán történő lehúzásakor</string>
+  <string name="status_bar_quick_qs_pulldown_summary_left">Bal</string>
+  <string name="status_bar_quick_qs_pulldown_summary_right">Jobb</string>
+  <string name="status_bar_quick_qs_pulldown_off">Ki</string>
+  <string name="status_bar_quick_qs_pulldown_left">Bal</string>
+  <string name="status_bar_quick_qs_pulldown_right">Jobb</string>
 </resources>
